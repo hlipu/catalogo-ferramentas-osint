@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSINT Vault | Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .manager-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; max-width: 1400px; margin: 0 auto; min-height: 70vh;}
+    @media (max-width: 900px) { .manager-layout { grid-template-columns: 1fr; } }
+    .panel { background: var(--bg2); border: 1px solid var(--border); padding: 20px; border-radius: 4px; display: flex; flex-direction: column; gap: 16px; }
+    .panel h2 { color: var(--green); font-family: var(--mono); font-size: 1.2rem; border-bottom: 1px dashed var(--border); padding-bottom: 10px; }
+    textarea { width: 100%; height: 350px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); padding: 12px; font-family: var(--mono); font-size: 0.85rem; border-radius: 4px; resize: vertical; }
+    textarea:focus { outline: none; border-color: var(--green-dim); }
+    .btn { background: var(--bg3); color: var(--green); border: 1px solid var(--green-dim); padding: 10px 16px; font-family: var(--mono); cursor: pointer; border-radius: 2px; transition: 0.2s; font-weight: bold; }
+    .btn:hover { background: rgba(0,255,136,0.1); box-shadow: 0 0 10px rgba(0,255,136,0.2); }
+    .btn-danger { color: var(--red); border-color: var(--red); }
+    .tool-list { display: flex; flex-direction: column; gap: 10px; max-height: 500px; overflow-y: auto; padding-right: 10px; }
+    .tool-item { background: var(--bg); border: 1px solid var(--border); padding: 12px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .export-bar { position: sticky; bottom: 0; background: var(--bg2); border-top: 1px solid var(--green); padding: 16px 24px; text-align: center; z-index: 100; }
+  </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="manager-layout">
+  <div class="panel">
+    <h2>[+] ADICIONAR / EDITAR NOTA (MD)</h2>
+    <textarea id="mdInput" placeholder="---\nURL: https://...\n..."></textarea>
+    
+    <div style="margin-top: -4px; margin-bottom: 4px;">
+      <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-family: var(--mono); color: var(--text);">
+        <input type="checkbox" id="inputTestada" style="width: 16px; height: 16px; accent-color: var(--green);">
+        <span style="font-size: 0.9rem;">⭐ Marcar como Ferramenta Testada</span>
+      </label>
+    </div>
+
+    <button class="btn" id="btnProcessar">Processar & Salvar Ferramenta</button>
+  </div>
+  
+  <div class="panel">
+    <h2>[=] FERRAMENTAS (<span id="countTools">0</span>)</h2>
+    <input 
+      type="text" 
+      id="managerSearch" 
+      placeholder="Pesquisar por nome ou tag..." 
+      style="width: 100%; background: var(--bg3); border: 1px solid var(--border); color: var(--text); padding: 10px; font-family: var(--mono); font-size: 0.85rem; border-radius: 4px; margin-bottom: 10px; outline: none;"
+    />
+    <div class="tool-list" id="toolList"></div>
+  </div>
+</div>
+
+<div class="export-bar">
+  <button class="btn" style="background: var(--green); color: var(--bg);" id="btnExportar">⬇️ BAIXAR NOVO DATA.JS</button>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/data.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/manager.js"></script>
+<script>
+  // Injeta passando '../' porque estamos dentro da pasta pages/
+  UI.loadHeader('../');
+  UI.loadFooter();
+</script>
+</body>
+</html>

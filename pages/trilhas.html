@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSINT Vault | Trilhas de Investigação</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="layout">
+
+  <aside>
+    <div class="filter-group">
+      <div class="filter-group-title">TRILHAS DE INVESTIGAÇÃO</div>
+      
+      <button class="trail-menu-btn" data-id="cnpj">🏢 CNPJ</button>
+      <button class="trail-menu-btn" data-id="cpf">📄 CPF</button>
+      <button class="trail-menu-btn" data-id="dominio">🌐 Domínio & IP</button>
+      <button class="trail-menu-btn" data-id="email">✉️ E-mail</button>
+      <button class="trail-menu-btn" data-id="financeiro">💎 Financeiro & Crypto</button>
+      <button class="trail-menu-btn" data-id="imagem">🖼️ Imagem</button>
+      <button class="trail-menu-btn" data-id="redes-sociais">📲 Redes Sociais</button>
+      <button class="trail-menu-btn" data-id="telefone">📱 Telefone</button>
+      <button class="trail-menu-btn" data-id="username">👤 Username</button>
+      <button class="trail-menu-btn" data-id="veiculos">🚗 Veículos</button>
+    </div>
+  </aside>
+
+  <main style="padding: 32px 28px;" id="trail-main-container">
+    </main>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="../js/data-trilhas.js"></script>
+
+<script src="../js/components.js"></script>
+
+<script src="../js/trilhas.js"></script>
+
+<script>
+  // Carrega o Header e Footer ajustando o caminho relativo ('../') por estar na pasta /pages
+  UI.loadHeader('../');
+  UI.loadFooter();
+</script>
+
+</body>
+</html>
