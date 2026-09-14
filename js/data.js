@@ -19,6 +19,22 @@ const TOOLS = [
     "notes": "* Embora o WARP mascare o endereço IP real por meio do roteamento da rede Cloudflare, ele foi projetado com foco em segurança e criptografia de tráfego, não funcionando como uma ferramenta de anonimato total multilink com alteração geográfica precisa de IP (como a rede Tor).\n- Recomenda-se ativar o recurso sempre que o analista precisar realizar pesquisas a partir de conexões de internet compartilhadas ou públicas (como aeroportos, cafés ou hotéis) para evitar ataques de interceptação (*Man-in-the-Middle*).\n- A integração da ferramenta com navegadores blindados e técnicas de mitigação de *fingerprinting* maximiza a segurança global da máquina virtual ou ambiente de investigação."
   },
   {
+    "id": "360Cities",
+    "title": "360Cities",
+    "url": "https://www.360cities.net/",
+    "tipo": "Repositório Global de Imagens Panorâmicas e Inteligência Geoespacial (GEOINT)",
+    "utilidade": "Exploração visual imersiva, validação de terreno e inteligência geoespacial por meio de imagens panorâmicas de 360° e gigapixels geolocalizados",
+    "descricao": "O 360Cities é uma das maiores plataformas colaborativas do mundo dedicadas à publicação, catalogação e visualização de fotografias panorâmicas em 360 graus, vídeos imersivos e imagens gigapixel em altíssima resolução. O serviço organiza o conteúdo visual em um mapa global interativo, permitindo navegar virtualmente por locais urbanos, rurais, marcos arquitetônicos e pontos remotos em diversas partes do planeta.",
+    "testada": false,
+    "tags": [
+      "fonte/geoespacial",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "Em investigações baseadas em fontes abertas, especialmente sob a disciplina de GEOINT (Geointeligência) e IMINT (Inteligência de Imagens), o 360Cities atua como uma camada complementar crítica aos serviços convencionais de Street View e satélite. A plataforma possibilita a verificação visual de fachadas, análise de linha de visada (Line of Sight), triangulação de pontos de referência e validação de terrenos em áreas com cobertura desatualizada ou restrita no Google Street View ou no Apple Maps.",
+    "notes": "* As imagens costumam conter registros temporais específicos e créditos dos fotógrafos, o que auxilia na determinação da época em que a estrutura visual do local foi documentada.\n* As fotografias no formato Gigapixel oferecem nível extremo de detalhe através de zoom profundo, sendo úteis para ler placas, inscrições distantes e detalhes de engenharia/arquitetura em investigações de reconhecimento de terreno."
+  },
+  {
     "id": "4Devs",
     "title": "4Devs",
     "url": "https://www.4devs.com.br/",
@@ -244,6 +260,24 @@ const TOOLS = [
     "notes": "* Na versão gratuita (Community), todas as submissões de arquivos, URLs e os respectivos relatórios gerados tornam-se públicos para consulta de qualquer usuário da internet. Evite submeter documentos que contenham dados pessoais, credenciais reais ou segredos comerciais da investigação nessa modalidade.\n* A plataforma viabiliza a extração e o download de arquivos PCAP (captura de pacotes de rede) gerados durante a detonação, permitindo que o investigador realize análises de tráfego ainda mais aprofundadas em ferramentas locais como o Wireshark."
   },
   {
+    "id": "Archive.today (archive.ph)",
+    "title": "Archive.today (archive.ph)",
+    "url": "https://archive.ph/",
+    "tipo": "Serviço de Arquivamento Digital e Preservação Web",
+    "utilidade": "Preservação de páginas web em tempo real, arquivamento forense passivo e recuperação de conteúdos históricos ou restritos por paywall",
+    "descricao": "O Archive.today (acessível via domínios como archive.ph, archive.is, archive.today) é uma plataforma online de arquivamento e preservação digital de páginas da World Wide Web. O serviço cria capturas sob demanda (*snapshots*) de URLs submetidas por usuários, gerando duas réplicas distintas do conteúdo: uma versão em texto estruturado e uma cópia visual estática de alta fidelidade baseada em imagem/rasterização, desprovida de scripts executáveis e elementos dinâmicos maliciosos.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "fonte/arquivos-noticias",
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas (OSINT), a ferramenta desempenha um papel duplo essencial: preservação de evidências digitais e coleta passiva de dados. Ela permite fixar páginas investigadas no momento exato da consulta, garantindo a integridade temporal de provas antes que sejam alteradas, deletadas ou removidas do ar. Além disso, por indexar e servir cópias em texto puro de matérias jornalísticas e posts, auxilia na recuperação de dados públicos bloqueados por barreiras comerciais (paywalls e captchas invasivos) e no resgate de versões históricas de sites vinculados a um domínio-alvo.",
+    "notes": "* As capturas efetuadas pelo Archive.today são desprovidas de elementos JavaScript ativos e executáveis, tornando a navegação pela réplica segura contra potenciais scripts rastreadores ou malwares inseridos na página original.\n* A submissão de uma página ao serviço é pública; portanto, se a URL contiver parâmetros sensíveis ou tokens de autenticação privados, tais dados ficarão expostos publicamente na base do arquivo.\n* A plataforma gera URLs fixas e curtas para cada snapshot, facilitando o encadeamento de fontes em relatórios periciais e notas de investigação."
+  },
+  {
     "id": "Arrows.app",
     "title": "Arrows.app",
     "url": "https://arrows.app/",
@@ -274,6 +308,22 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No planejamento operacional e na preparação de ações de inteligência (como HUMINT digital ou infiltração virtual), a plataforma é utilizada para a construção de avatares altamente realistas para *Sock Puppets* (perfis falsos de investigação). Diferente de repositórios estáticos de rostos gerados por IA, o Artbreeder permite ajustar finamente os atributos da face gerada e criar variações da mesma identidade sob diferentes ângulos ou expressões, reduzindo as chances de detecção do perfil por análise visual básica.",
     "notes": "* Como as imagens são geradas por inteligência artificial, elas não possuem correspondentes no mundo real, impossibilitando que ferramentas tradicionais de busca reversa (como Google Lens ou Yandex) associem o avatar a um indivíduo existente.\n* Recomenda-se atenção aos artefatos visuais típicos de imagens geradas por IA (como brincos assimétricos, fundos distorcidos ou falhas na transição do cabelo), utilizando os seletores da ferramenta para suavizar imperfeições que possam denunciar a natureza sintética do perfil em análises forenses."
+  },
+  {
+    "id": "ascii2d",
+    "title": "ascii2d",
+    "url": "https://ascii2d.net/",
+    "tipo": "Motor de Busca Reversa de Imagens / IMINT",
+    "utilidade": "Busca reversa especializada de ilustrações, arte digital e mídias visuais da web asiática por correspondência de cor e detalhes",
+    "descricao": "O ascii2d é um motor de busca reversa de imagens japonês projetado especificamente para rastrear e identificar ilustrações, arte digital, mangás e mídias visuais compartilhadas em plataformas e comunidades asiáticas (como Pixiv, X/Twitter e Nijie). O sistema oferece dois modos principais de correspondência: busca por detalhes/formas (*Feature Search*) e busca por paleta/distribuição de cores (*Color Search*).",
+    "testada": false,
+    "tags": [
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, inteligência de imagens (IMINT) e checagem de fatos, o ascii2d é uma ferramenta de referência para contornar pontos cegos de motores de busca ocidentais ao lidar com ilustrações, peças gráficas, avatares estilizados e mídias visuais. Ele viabiliza a localização do artista original, a data da primeira postagem e o contexto primário de imagens que sofreram cortes, edições ou variações de cor.",
+    "notes": "* A alternância entre a busca por \"Cor\" e a busca por \"Detalhes\" é útil para localizar artes que passaram por filtros cromáticos ou alterações estruturais parciais.\n* Apresenta taxa de assertividade expressiva para mídias hospedadas em redes japonesas e perfis de ilustradores no X (Twitter) e Pixiv."
   },
   {
     "id": "Audacity",
@@ -360,6 +410,22 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações corporativas, inteligência contra ameaças (Threat Intelligence) e auditorias de segurança, o Axur Watchdog serve como uma ferramenta de diagnóstico e monitoramento defensivo. Ele permite que o analista identifique se contas, e-mails organizacionais ou dados estruturados de uma determinada instituição foram expostos em incidentes de segurança de terceiros ou estão sendo negociados em mercados ilegais, acelerando o processo de triagem de incidentes.",
     "notes": "* É uma solução altamente eficaz para a verificação automatizada de vazamentos que afetam o ecossistema de uma empresa, eliminando a necessidade de o analista acessar diretamente ambientes hostis da dark web para realizar consultas manuais de credenciais da própria organização.\n* Por se tratar de um indexador de vazamentos históricos e consolidados, deve ser utilizado em conjunto com ferramentas de validação técnica ativa para confirmar se as credenciais expostas detectadas na plataforma ainda permanecem ativas e funcionais nos sistemas internos do alvo."
+  },
+  {
+    "id": "Baidu",
+    "title": "Baidu",
+    "url": "https://www.baidu.com/",
+    "tipo": "Mecanismo de Busca Web e Indexador Global",
+    "utilidade": "Indexação, rastreamento e busca de páginas públicas, documentos, imagens e entidades no ecossistema web e digital chinês",
+    "descricao": "O Baidu é o principal mecanismo de busca e portal de serviços web da China, funcionando como o maior indexador de páginas e documentos digitais em língua chinesa no mundo. A ferramenta rastreia, cataloga e classifica conteúdos distribuídos na internet global com forte ênfase na web chinesa e no espaço regional da Ásia-Pacífico, disponibilizando módulos de pesquisa textual, busca por imagens, notícias, mapas e repositórios enciclopédicos (Baidu Baike).",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas, o Baidu é indispensável para a coleta primária de informações, reconhecimento e enumeração de alvos vinculados à China ou operando na infraestrutura asiática. Devido a diferenças algorítmicas e ao alcance de rastreamento em relação a motores ocidentais (como Google e Bing), o Baidu indexa portais institucionais, empresas locais, fóruns comunitários e registros digitais que não aparecem com facilidade em outros buscadores, ampliando a cobertura de coleta e mitigando pontos cegos regionais.",
+    "notes": "* Operadores avançados de pesquisa (como `site:`, `filetype:`, `intitle:` e uso de aspas para correspondência exata) funcionam na sintaxe de busca do Baidu e auxiliam no refino de dorks investigativas.\n* Para investigações aprofundadas sobre alvos locais, recomenda-se realizar buscas utilizando termos e palavras-chave grafadas em caracteres chineses simplificados (Hanzi), além de combinar a ferramenta com tradutores e serviços de análise de contexto linguístico."
   },
   {
     "id": "Betaface (Old Demo)",
@@ -499,6 +565,22 @@ const TOOLS = [
     "notes": "* Como a plataforma se comporta primordialmente como um ecossistema orientativo e um repositório conceitual, ela não realiza buscas diretas nas redes blockchain de forma nativa; o analista deve usá-la para selecionar de modo estratégico o *explorer* ou a ferramenta OSINT mais aderente à sua necessidade operacional.\n* A plataforma oferece abas e guias auxiliares voltados para a privacidade e segurança digital do investigador, servindo como reforço doutrinário de OPSEC antes que consultas externas sejam disparadas."
   },
   {
+    "id": "Bluegrass AI",
+    "title": "Bluegrass AI",
+    "url": "https://www.bluegrass.ai/",
+    "tipo": "Plataforma de Dados Sintéticos e Treinamento de Inteligência Artificial",
+    "utilidade": "Geração, enriquecimento e gerenciamento de dados sintéticos estruturados e visão computacional por meio de inteligência artificial",
+    "descricao": "A Bluegrass AI é uma plataforma corporativa especializada no desenvolvimento e na geração de dados sintéticos de alta fidelidade e modelos de visão computacional. Utilizando algoritmos generativos avançados, o sistema cria conjuntos de dados simulados (estruturados, visuais e tabulares) para treinar, validar e testar modelos de inteligência artificial e aprendizado de máquina (*machine learning*) sem comprometer dados sensíveis do mundo real.",
+    "testada": false,
+    "tags": [
+      "func/analise-processamento-ia",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No ecossistema de inteligência de fontes abertas e análise de dados, a Bluegrass AI enquadra-se na fase de processamento analítico e inteligência assistida por máquina. A ferramenta apoia analistas e equipes técnicas na modelagem de cenários preditivos, na geração de dados para testes de segurança/OPSEC e na otimização de modelos de visão computacional utilizados para categorização e reconhecimento automatizado de grandes volumes de informações e mídias brutas previamente coletadas.",
+    "notes": "* Os dados sintéticos gerados podem ser aproveitados para calibrar ferramentas de triagem automatizada e modelos de reconhecimento de entidades (NER) antes de sua aplicação em dados reais de investigação.\n* Por operar sob processamento em nuvem proprietária de terceiros, deve-se observar a conformidade de OPSEC e proteção de dados ao parametrizar regras de negócios e fluxos de trabalho analíticos."
+  },
+  {
     "id": "BlueStacks",
     "title": "BlueStacks",
     "url": "https://www.bluestacks.com/",
@@ -552,6 +634,25 @@ const TOOLS = [
     "notes": "* Devido à higienização prévia das tabelas, os arquivos disponíveis em formato CSV e JSON são ideais para importação direta em ferramentas de análise de vínculos locais e bancos de dados relacionais.\n* Para automações e extrações automatizadas de larga escala, o uso de credenciais de API registradas é mandatório, e requisições excessivas sem autenticação são bloqueadas por mecanismos internos de proteção de infraestrutura."
   },
   {
+    "id": "BreachBase",
+    "title": "BreachBase",
+    "url": "https://breachbase.com/",
+    "tipo": "Motor de Busca de Vazamentos de Dados (Data Breach Search Engine)",
+    "utilidade": "Mecanismo de busca e inteligência sobre credenciais vazadas, e-mails, nomes de usuário e histórico de exposição em incidentes de segurança",
+    "descricao": "O BreachBase é um serviço online voltado para a consulta e agregação de dados expostos em incidentes de segurança cibernética e megavazamentos (*data breaches*). A plataforma indexa bilhões de registros públicos e semi-públicos contendo e-mails, *usernames*, senhas em texto claro ou *hashes*, endereços IP e identificadores digitais obtidos a partir de compilações de violações de dados, fóruns e repositórios clandestinos.",
+    "testada": false,
+    "tags": [
+      "alvo/usuario-email",
+      "alvo/pessoa-identidade",
+      "fonte/vazamentos-darkweb",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações em fontes abertas e inteligência de ameaças cibernéticas (CYBINT/DARKINT), a ferramenta atua como um mecanismo de reconhecimento passivo e *pivoting*. Ela viabiliza o mapeamento da pegada digital de indivíduos ou colaboradores corporativos, permitindo correlacionar nomes de usuário e endereços de e-mail a credenciais antigas ou senhas reutilizadas, o que auxilia na verificação de vínculos entre diferentes identidades online e na mensuração do nível de exposição de um alvo.",
+    "notes": "* A busca por senhas ou *hashes* conhecidos permite identificar outros e-mails ou nomes de usuário que utilizam a mesma combinação, sendo uma técnica para mapear contas alternativas (*sock puppets*) operadas pela mesma pessoa.\n* Por operar em infraestrutura de terceiros, recomenda-se cautela em termos de OPSEC ao pesquisar seletores específicos, evitando expor o foco investigativo a partir de endereços IP desprotegidos."
+  },
+  {
     "id": "BrowserLeaks",
     "title": "BrowserLeaks",
     "url": "https://browserleaks.com/",
@@ -567,6 +668,25 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo de investigações digitais, o BrowserLeaks é um recurso crítico voltado para a Segurança Operacional (OPSEC) e a proteção do analista. Antes de iniciar qualquer coleta ativa ou interagir com infraestruturas controladas pelo alvo, o investigador utiliza a plataforma para validar se suas ferramentas de anonimização (VPNs, Proxies, rede Tor ou navegadores blindados) estão operando corretamente e sem vazamentos de tráfego que possam comprometer sua identidade real ou revelar a origem da investigação.",
     "notes": "* É altamente recomendado incluir o BrowserLeaks no checklist de pré-investigação sempre que um novo perfil técnico ou ambiente virtual de navegação for inicializado.\n* A análise do módulo \"Canvas Fingerprint\" e \"TLS Client Fingerprint\" deve ser observada com atenção: se o navegador do analista apresentar uma assinatura digital extremamente rara ou única no ecossistema global da ferramenta, ele poderá ser facilmente rastreado pelo alvo, sendo necessária a alteração de parâmetros do agente de usuário (User-Agent) ou o uso de extensões de ruído (noise insertion)."
+  },
+  {
+    "id": "Browsertrix Crawler",
+    "title": "Browsertrix Crawler",
+    "url": "https://crawler.docs.browsertrix.com/",
+    "tipo": "Ferramenta de Web Crawling e Preservação Digital Baseada em Navegador",
+    "utilidade": "Rastreamento web automatizado de alta fidelidade baseado em navegador para preservação digital e arquivamento em formatos WACZ e WARC",
+    "descricao": "O Browsertrix Crawler é um rastreador web (*web crawler*) de alta fidelidade desenvolvido pelo projeto Webrecorder. Projetado para superar as limitações de rastreadores tradicionais frente à web moderna, ele utiliza navegadores reais controlados via automação (Chromium) para renderizar JavaScript complexo, carregar conteúdos dinâmicos (*Single Page Applications*), reproduzir mídias e rolar páginas automaticamente. A ferramenta empacota todo o tráfego HTTP, mídias e metadados coletados diretamente nos formatos padronizados de preservação digital WACZ e WARC.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "fonte/arquivos-noticias",
+      "func/scrapers-automacao",
+      "plataforma/terminal",
+      "plataforma/desktop",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações baseadas em fontes abertas e procedimentos de preservação probatória, o Browsertrix Crawler permite a coleta automatizada, profunda e estruturada de portais, fóruns e perfis em redes sociais antes que sejam apagados ou modificados. Por executar um motor de renderização completo de navegador, ele garante a captura fidedigna de elementos dinâmicos e mídias ricas que coletores puramente baseados em requisições HTTP costumam ignorar, viabilizando auditorias forenses e reproduções *offline* autênticas das páginas arquivadas.",
+    "notes": "* A forma mais direta e recomendada de execução é por meio de contêineres Docker, onde o comando recebe os parâmetros de semente (*seed URL*), limites de profundidade (*crawl depth*) e gera os arquivos `.wacz` no volume mapeado.\n* Os arquivos gerados podem ser validados e navegados de forma interativa e *offline* utilizando o visualizador ReplayWeb.page.\n* Permite a injeção de perfis de autenticação e *cookies* prévios para possibilitar a coleta dentro de áreas restritas ou contas de redes sociais previamente logadas."
   },
   {
     "id": "BuiltWith",
@@ -716,6 +836,22 @@ const TOOLS = [
     "notes": ""
   },
   {
+    "id": "Caipora Pro",
+    "title": "Caipora Pro",
+    "url": "https://caipora.pro/",
+    "tipo": "Diretório Centralizado de Links e Framework de Recursos OSINT",
+    "utilidade": "Catálogo curado e repositório centralizado de ferramentas, serviços e fontes de dados para OSINT e investigação digital com foco no cenário brasileiro",
+    "descricao": "O Caipora Pro é uma plataforma web que atua como um repositório centralizado e curadoria estruturada de recursos, ferramentas e fontes abertas voltadas para Inteligência de Fontes Abertas (OSINT) e investigação digital. Organizado em dezenas de categorias temáticas — incluindo buscadores, análise de metadados, pessoas, empresas, consultas processuais, cartórios, portais da transparência, GEOINT, redes sociais e vazamentos —, o projeto foca especialmente no ecossistema e nas particularidades das bases de dados e registros públicos do Brasil.",
+    "testada": false,
+    "tags": [
+      "fonte/repositorio",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No planejamento e condução de investigações cibernéticas e corporativas, o Caipora Pro funciona como um mapa de navegação e ponto de partida de inteligência (*OSINT Toolkit*). Ele reúne em uma interface única e categorizada links para bases institucionais, ferramentas analíticas e endpoints de consulta que seriam de difícil localização isolada, agilizando o processo de coleta e expansão de *leads* em operações voltadas a alvos brasileiros e globais.",
+    "notes": "* É uma excelente ferramenta de apoio para a fase inicial de reconhecimento e seleção de vetores de busca (*footprinting*), especialmente para investigações que demandam o cruzamento de bases locais brasileiras (Receita Federal, Tribunais, Diários Oficiais e órgãos reguladores).\n* Os links indexados redirecionam para serviços de terceiros; a disponibilidade, integridade e as políticas de acesso de cada ferramenta individual devem ser validadas durante a operação."
+  },
+  {
     "id": "Câmeras CET-SP",
     "title": "Câmeras CET-SP",
     "url": "https://cameras.cetsp.com.br/View/Cam.aspx",
@@ -803,6 +939,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo de background checks, investigações patrimoniais e atividades de VATINT (Vehicle and Travel Intelligence), a ferramenta serve para auditar a situação legal de ativos rodoviários e apoiar o rastreamento de frotas ou bens vinculados a organizações e indivíduos sob análise técnica.",
     "notes": "* É uma fonte valiosa para complementar investigações de ocultação de patrimônio e fraudes comerciais, mapeando se veículos sob posse do alvo possuem impedimentos ou restrições de transferência.\n* A plataforma opera sob conformidade com a LGPD e a LAI, focando na telemetria técnica e no histórico administrativo do veículo sem expor dados estritamente privados de proprietários de forma direta."
+  },
+  {
+    "id": "Carrot2",
+    "title": "Carrot2",
+    "url": "https://search.carrot2.org/#/search/web",
+    "tipo": "Mecanismo de Agrupamento e Visualização Semântica de Resultados Web",
+    "utilidade": "Agrupamento temático automático e visualização de tópicos de resultados de motores de busca em clusters",
+    "descricao": "O Carrot2 é um mecanismo de busca e framework de clustering de código aberto voltado para a organização dinâmica de informações da web. Em vez de entregar os resultados exclusivamente em uma lista linear convencional, a ferramenta processa os snippets e resumos de buscas na rede e os organiza automaticamente em tópicos temáticos (clusters). A plataforma disponibiliza interfaces gráficas com visualizações interativas em formato de mapas em árvore (*treemap*) e círculos concêntricos (*pie-chart / foamtree*).",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "func/analise-visualizacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No fluxo de inteligência de fontes abertas, o Carrot2 atua na fase de reconhecimento e análise preliminar de grandes volumes de resultados. Ao categorizar termos e links correlacionados em grupos conceituais semânticos, ele permite ao analista identificar subtemas, entidades ligadas a um alvo ou contextos emergentes que passariam despercebidos em uma paginação tradicional de buscadores, agilizando o direcionamento da investigação.",
+    "notes": "* Os clusters gerados facilitam a exclusão de ambiguidades (por exemplo, diferenciar homônimos ao agrupar resultados de pessoas por profissões ou localizações distintas).\n* O projeto também possui componentes de código aberto em Java que podem ser integrados localmente a pipelines de processamento de texto e dados não estruturados."
   },
   {
     "id": "CCFácil",
@@ -1039,6 +1192,43 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No âmbito das investigações de fontes abertas, a ferramenta funciona como um validador tático de alvos telefônicos. Ela permite confirmar se um número de telefone está ativo na rede do WhatsApp, descobrir metadados públicos vinculados ao identificador (como a presença de contas comerciais ou fotos de perfil expostas) e mapear se aquele identificador digital consta em compilações de dados ou dumps históricos originados de vazamentos de dados na internet.",
     "notes": "* É recomendável inserir o número com o código internacional de discagem (DDI) e o código de área (DDD) correspondentes (ex: 55 para o Brasil) para garantir a correta indexação e busca no sistema.\n* Os resultados obtidos devem ser cruzados com consultas adicionais em fontes oficiais e ferramentas de sincronização de contatos para mitigar a ocorrência de falsos positivos gerados por reuso ou reciclagem de linhas telefônicas."
+  },
+  {
+    "id": "Cobertura Celular",
+    "title": "Cobertura Celular",
+    "url": "http://www.coberturacelular.com.br/",
+    "tipo": "Portal Web de Consulta Geoespacial e Infraestrutura de Telecomunicações",
+    "utilidade": "Mapeamento geoespacial de Estações Rádio Base (ERBs), localização de torres de telefonia móvel e verificação de cobertura por operadora e tecnologia",
+    "descricao": "O Cobertura Celular é uma plataforma web voltada ao mapeamento e localização de infraestruturas de telecomunicações no território brasileiro. Desenvolvido com base em dados técnicos e regulatórios públicos da Agência Nacional de Telecomunicações (Anatel), o portal permite consultar a localização exata de Estações Rádio Base (ERBs/torres celulares), identificar a proximidade de antenas por operadora (Claro, TIM, Vivo, entre outras) e verificar a disponibilidade das tecnologias suportadas (2G, 3G, 4G e 5G) a partir de endereços, bairros ou coordenadas geográficas.",
+    "testada": false,
+    "tags": [
+      "alvo/telefone",
+      "fonte/geoespacial",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "func/infraestrutura-cybint",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações com componentes de geolocalização (GEOINT), análise de inteligência em telecomunicações e reconstrução de eventos temporais/espaciais, a plataforma serve como ferramenta de correlação de sinal e infraestrutura. O analista pode cruzar dados de ERBs para contextualizar registros de bilhetagem/chamadas (CDR), validar se um determinado local geográfico possui cobertura real de uma operadora específica, estimar a torre mais próxima conectada a um dispositivo alvo e apoiar a análise de pontos cegos ou áreas de sombra de conectividade celular.",
+    "notes": "* A busca pode ser refinada inserindo diretamente as coordenadas geográficas (latitude e longitude) para obter a distância exata em metros até a ERB mais próxima do ponto de interesse.\n* Útil para confrontar alegações de álibi ou presença em determinados locais, verificando se a região apresentava viabilidade técnica de sinal para a operadora utilizada pelo alvo no momento do fato.\n* Deve ser utilizado de forma complementar aos painéis oficiais da Anatel (Mosaico/Painéis de Dados) e ferramentas como OpenCelliD e WiGLE para triangulação de sinais sem fio."
+  },
+  {
+    "id": "Comment Picker - Find Instagram Username by User ID",
+    "title": "Comment Picker - Find Instagram Username by User ID",
+    "url": "https://commentpicker.com/instagram-username.php",
+    "tipo": "Ferramenta Web de Consulta e Resolução de Identificadores",
+    "utilidade": "Resolução reversa de ID numérico do Instagram (UID) para obtenção do nome de usuário atualizado (username/handle)",
+    "descricao": "O utilitário \"Find Instagram Username\" do Comment Picker é uma ferramenta online desenvolvida para resolver identificadores numéricos exclusivos do Instagram (User ID / UID) em seus respectivos nomes de usuário (@username). O serviço realiza consultas diretas às APIs públicas e pontos de extremidade da plataforma para retornar o *handle* atual associado a uma conta, permitindo contornar alterações frequentes de nome feitas por usuários.",
+    "testada": false,
+    "tags": [
+      "fonte/redes-sociais",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações em mídias sociais (SOCMINT), o identificador numérico (UID) de um perfil permanece imutável, mesmo quando o alvo troca reiteradamente seu nome de exibição, biografia ou @handle para despistar monitoramentos. Esta ferramenta opera como um mecanismo essencial de busca reversa (*pivoting*), permitindo que o analista localize o perfil atualizado de um investigado a partir de um ID previamente catalogado em logs, capturas de tráfego, metadados ou extrações passadas.",
+    "notes": "* Útil para reestabelecer o monitoramento de alvos que alteram o @username para quebrar cadeias de custódia e vínculos com materiais de investigação antigos.\n* Pode ser complementado com a ferramenta inversa da mesma plataforma (busca de ID a partir do nome de usuário), permitindo fixar o UID estático do alvo desde o início da coleta.\n* Para contas banidas, desativadas ou configuradas com níveis extremos de restrição de privacidade, a API pode não conseguir resolver o nome, sendo necessária a validação secundária via scrapers diretos ou consultas a endpoints do GraphQL."
   },
   {
     "id": "Concessões Ferroviárias - ANTT",
@@ -1465,6 +1655,24 @@ const TOOLS = [
     "notes": "* A ferramenta é altamente eficaz para descobrir ambientes de desenvolvimento, servidores de homologação (*staging*) ou subdomínios temporários que, embora ocultos de motores de busca tradicionais como o Google, tiveram certificados SSL gerados.\n* Devido ao volume massivo de requisições globais que o serviço recebe, a interface web pode apresentar instabilidades temporárias (timeouts). Para investigações em larga escala, recomenda-se realizar consultas diretas ao banco de dados PostgreSQL público da plataforma via terminal ou scripts automatizados."
   },
   {
+    "id": "Crunchbase",
+    "title": "Crunchbase",
+    "url": "https://www.crunchbase.com/",
+    "tipo": "Plataforma de Inteligência Corporativa e Banco de Dados de Mercado (Business Intelligence)",
+    "utilidade": "Inteligência corporativa, mapeamento de investimentos, captações financeiras e identificação de fundadores e executivos",
+    "descricao": "O Crunchbase é uma plataforma global de inteligência corporativa e dados de negócios focada no ecossistema de startups, empresas de tecnologia e fundos de investimento. O serviço cataloga e estrutura informações sobre rodadas de financiamento, investidores, aquisições, quadro de liderança, fundadores, estimativas de receita e tecnologias utilizadas por organizações empresariais no mundo todo.",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações corporativas, diligência prévia (*due diligence*) e rastreamento de vínculos societários, o Crunchbase serve como uma fonte centralizadora para mapear a estrutura financeira e operacional de empresas e startups. A plataforma viabiliza o *pivoting* a partir do nome de uma organização para descobrir fundadores, executivos-chave, investidores institucionais e histórico de aportes de capital, auxiliando no mapeamento de redes de negócios e conexões societárias internacionais.",
+    "notes": "* A seção de \"Funding Rounds\" detalha as datas e valores de investimentos recebidos, sendo útil para auditar o fluxo de capital e a capacidade financeira de empresas investigadas.\n* Os dados combinam informações fornecidas pela própria comunidade/empresas, notícias de imprensa e parcerias com fundos de capital de risco; portanto, dados críticos de governança devem ser cruzados com registros oficiais em juntas comerciais e órgãos reguladores."
+  },
+  {
     "id": "CTI Dashboard (Start.me)",
     "title": "CTI Dashboard (Start.me)",
     "url": "https://start.me/p/X2J5Gy/cti",
@@ -1659,6 +1867,24 @@ const TOOLS = [
     "notes": "* A ferramenta é ideal para analisar e auditar os hábitos de criação de credenciais de um alvo (por exemplo, reutilização de senhas antigas), servindo como base valiosa para engenharia social ou avaliação de riscos corporativos.\n* Devido à plataforma não realizar varreduras ativas sob demanda na rede (consultando apenas o seu próprio índice já compilado), o analista deve manter atenção em relação à OPSEC na barra de pesquisa web. Para consultas em larga escala, recomenda-se a integração via API disponibilizada pela própria plataforma."
   },
   {
+    "id": "Depositphotos Search by Image",
+    "title": "Depositphotos Search by Image",
+    "url": "https://depositphotos.com/search-by-image.html",
+    "tipo": "Motor de Busca Reversa de Imagens / Catálogo Comercial",
+    "utilidade": "Busca reversa de imagens para identificação de fotos de banco de imagens (stock photos), elementos gráficos similares e verificação de autenticidade",
+    "descricao": "O Depositphotos Search by Image é um recurso de busca reversa baseado em inteligência visual integrado à plataforma de banco de imagens Depositphotos. A ferramenta permite o upload de fotografias ou ilustrações para rastrear ativos visuais correspondentes, variações idênticas ou elementos estéticos semelhantes dentro de um catálogo com centenas de milhões de fotos de estoque, vetores e ilustrações comerciais.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, análise de mídias (IMINT) e desarticulação de perfis falsos (*sock puppets* ou fraudes), a ferramenta é aplicada na identificação rápida de fotografias de bancos de imagens utilizadas de forma enganosa como fotos de perfil, provas sociais ou identidades sintéticas. Ela possibilita validar se o retrato atribuído a um indivíduo em um site institucional, rede social ou documento é, na realidade, um modelo de estoque comercial, revelando a proveniência do ativo e a ausência de autenticidade da entidade investigada.",
+    "notes": "* Útil para localizar sessões de fotos inteiras do mesmo modelo, permitindo ao investigador encontrar outras poses ou ângulos frequentemente utilizados pelos mesmos criadores de perfis falsos.\n* Pode ser combinada com outros motores de busca reversa generalistas (Google Lens, Yandex, Bing) para isolar especificamente quando uma imagem de interesse provém de um acervo comercial de fotografia de estoque."
+  },
+  {
     "id": "Despesas por Fornecedor (TCE-SP)",
     "title": "Despesas por Fornecedor (TCE-SP)",
     "url": "https://transparencia.tce.sp.gov.br/despesas-fornecedor",
@@ -1694,6 +1920,23 @@ const TOOLS = [
     "notes": "* Recomenda-se o uso da ferramenta como um checklist técnico mandatório antes do início de qualquer investigação em campo digital, assegurando que o perfil do navegador esteja devidamente higienizado.\n* Atenção especial deve ser dedicada aos módulos de \"WebRTC Leak\" e \"DNS Leak\" contidos na interface da ferramenta: se o endereço IP real do provedor de internet do investigador aparecer listado nessas seções (mesmo com a VPN ativada), a OPSEC está severamente comprometida por falha de configuração de rede."
   },
   {
+    "id": "Disconnect Search",
+    "title": "Disconnect Search",
+    "url": "https://search.disconnect.me/",
+    "tipo": "Metabuscador Privativo e Ferramenta de Anonimização de Consultas",
+    "utilidade": "Mecanismo de metabusca privativo para consultas anônimas em múltiplos motores de busca sem rastreamento de IP ou criação de perfis",
+    "descricao": "O Disconnect Search é um metabuscador focado em privacidade que atua como um intermediário seguro entre o usuário e os principais mecanismos de busca da internet (como Google e Bing). O serviço encaminha as consultas de pesquisa de forma criptografada e anônima através dos servidores do Disconnect, impedindo que os provedores de busca capturem o endereço IP real, associem termos pesquisados a contas pessoais ou instalem cookies e rastreadores persistentes no navegador do usuário.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "Durante a fase inicial de reconhecimento e coleta de inteligência em fontes abertas, o Disconnect Search permite realizar buscas amplas e varreduras de superfície preservando a segurança operacional (OPSEC) do analista. A ferramenta evita o vazamento do IP real e impede a contaminação dos resultados pela chamada \"bolha de filtros\" (*filter bubble*), garantindo que as consultas investigativas não sejam vinculadas ao perfil comercial ou de navegação do pesquisador.",
+    "notes": "* As buscas realizadas pelo Disconnect Search retornam os resultados de motores comerciais sem a personalização baseada em localização real ou histórico prévio, viabilizando resultados mais neutros e reprodutíveis.\n* Pode ser configurado como motor de busca padrão em navegadores voltados para investigação forense e privacidade para padronizar pesquisas de rotina com baixa pegada digital."
+  },
+  {
     "id": "DivulgaCandContas",
     "title": "DivulgaCandContas",
     "url": "https://divulgacandcontas.tse.jus.br/",
@@ -1727,6 +1970,25 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo da inteligência de fontes abertas, o DMI Tool Database atua como uma base de conhecimento estratégica e referencial na fase de planejamento de uma investigação. Ele fornece ao analista um portfólio documentado de ferramentas especializadas para coleta massiva de dados, permitindo descobrir novos scripts e softwares capazes de extrair informações estruturadas de plataformas específicas, contornar limitações de busca ou analisar dinâmicas de mídia digital.",
     "notes": "* A plataforma é estritamente documental e informativa, servindo para orientar o investigador sobre a existência e o funcionamento de softwares de terceiros, sem executar ações ou buscas ativas diretamente em sua interface.\n* Por documentar ferramentas voltadas para a pesquisa em plataformas dinâmicas, cabe ao analista verificar se os utilitários listados no repositório ainda estão ativos e atualizados, uma vez que mudanças frequentes nas APIs de redes sociais podem quebrar o funcionamento de scripts de raspagem legados."
+  },
+  {
+    "id": "DNSdumpster",
+    "title": "DNSdumpster",
+    "url": "https://dnsdumpster.com/",
+    "tipo": "Ferramenta de Reconhecimento DNS e Mapeamento de Infraestrutura",
+    "utilidade": "Reconhecimento e enumeração de registros DNS, descoberta de subdomínios e mapeamento visual de infraestrutura de rede",
+    "descricao": "O DNSdumpster é uma ferramenta online de inteligência e reconhecimento passivo mantida pelo projeto HackerTarget. Projetada para pesquisa técnica de superfície de ataque, a plataforma realiza consultas abrangentes em tabelas de registros DNS públicos, identificando servidores de nomes (NS), servidores de e-mail (MX), apontamentos de hosts (A e AAAA), registros de texto e validação (TXT) e subdomínios associados a um domínio-alvo. Além da listagem estruturada com respectivos endereços IP, ASN, provedor e geolocalização cadastral, a ferramenta gera mapas visuais e grafos interativos da arquitetura de rede mapeada.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "alvo/ip",
+      "func/infraestrutura-cybint",
+      "func/analise-visualizacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No ecossistema de inteligência cibernética (CYBINT) e reconhecimento técnico (*footprinting*), o DNSdumpster atua como uma ferramenta indispensável para mapear o perímetro digital completo de uma organização ou alvo investigado. Ela viabiliza a descoberta de subdomínios ocultos, servidores de desenvolvimento e portais internos expostos, além de correlacionar múltiplos apontamentos aos seus respectivos blocos de IP e sistemas autônomos (ASN), auxiliando na identificação de infraestruturas compartilhadas e pontos únicos de falha.",
+    "notes": "* Por realizar as buscas consultando bases de dados passivas e servidores DNS públicos, a ferramenta não envia tráfego de varredura ativa diretamente contra o servidor web do alvo, preservando a OPSEC do investigador.\n* A plataforma permite a exportação dos dados tabulados em formato Excel/XLS e o download do diagrama da rede em formato PNG ou PDF, o que agiliza a documentação em relatórios técnicos de investigação.\n* É recomendável cruzar a listagem de subdomínios obtida com registros de certificados SSL/TLS (Certificate Transparency Logs) para assegurar uma cobertura completa do perímetro do alvo."
   },
   {
     "id": "dnstwist",
@@ -1835,6 +2097,24 @@ const TOOLS = [
     "notes": "* Devido ao fato de o DotDB consultar um índice próprio preexistente (pesquisa passiva), a execução de buscas na plataforma não gera tráfego de rede direcionado ou alertas nos servidores do alvo, garantindo a integridade da OPSEC do investigador.\n* Recomenda-se que o analista utilize os resultados obtidos no DotDB como leads iniciais, cruzando posteriormente os nomes de domínio encontrados com ferramentas de resolução de DNS e análise de certificados SSL/TLS para constatar se compartilham da mesma infraestrutura técnica ativa (como o mesmo endereço IP ou ASN)."
   },
   {
+    "id": "DuckDuckGo",
+    "title": "DuckDuckGo",
+    "url": "https://duckduckgo.com/",
+    "tipo": "Motor de Busca Web Privativo e Indexador Global",
+    "utilidade": "Mecanismo de busca privativo na web para indexação abrangente, consultas neutras e execução de dorks sem rastreamento de dados pessoais",
+    "descricao": "O DuckDuckGo é um mecanismo de busca na web voltado para a preservação da privacidade e confidencialidade das consultas dos usuários. A plataforma indexa a rede mundial de computadores por meio de seu próprio rastreador (*DuckDuckBot*) e da agregação de centenas de fontes externas (como Bing, Wikipedia e parceiros próprios). Diferente dos mecanismos comerciais tradicionais, o DuckDuckGo não rastreia o histórico de navegação, não associa consultas a perfis de usuários, não armazena endereços IP em logs persistentes e não constrói perfis comportamentais para direcionamento de anúncios.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "func/busca-dorks",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência de fontes abertas, o DuckDuckGo serve como um dos principais vetores na fase de reconhecimento e coleta de inteligência de superfície. A plataforma permite a condução de varreduras amplas sem que as consultas sejam contaminadas pela \"bolha de filtros\" (*filter bubble*), garantindo resultados neutros e reprodutíveis. Além disso, a intermediate de requisições fortalece a segurança operacional (OPSEC) do analista ao evitar que termos de pesquisa investigativos ou sensíveis fiquem associados à identidade e aos metadados de telemetria do pesquisador.",
+    "notes": "* A plataforma dispõe do recurso de atalhos rápidos de redirecionamento (comandos `!bangs`, como `!w` para Wikipedia ou `!g` para Google criptografado), agilizando pesquisas direcionadas a repositórios e serviços específicos.\n* Para automatizar pesquisas ou integrar consultas em rotinas e scripts de investigação via linha de comando, é possível utilizar ferramentas de console compatíveis, como a CLI `ddgr`."
+  },
+  {
     "id": "E-mail Header Analyzer (Gaijin.at)",
     "title": "E-mail Header Analyzer (Gaijin.at)",
     "url": "https://gaijin.at/en/tools/e-mail-header-analyzer",
@@ -1851,6 +2131,25 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo de investigações baseadas em fontes abertas e cibercrimanalidade, a análise de cabeçalhos é fundamental para auditar a autenticidade de comunicações eletrônicas. A ferramenta permite realizar a engenharia reversa de e-mails suspeitos (phishing, ameaças ou fraudes corporativas), ajudando o analista a identificar o verdadeiro servidor de origem, detectar técnicas de falsificação de remetente (email spoofing) e extrair os primeiros indícios de autoria.",
     "notes": "* Para extrair as informações corretas, o analista deve obter o código-fonte completo da mensagem (\"exibir original\", \"ver cabeçalho completo\" ou \"ver código-fonte\" dependendo do provedor como Gmail ou Outlook) e copiar o bloco inteiro de texto para a caixa de análise da plataforma.\n* Como a plataforma não realiza consultas ativas de rede (como Whois ou geolocalização dos IPs encontrados), o investigador deve utilizar os endereços IP extraídos pelo Gaijin.at como novos alvos (*pivoting*) em ferramentas externas especializadas em infraestrutura para complementar o mapa da investigação."
+  },
+  {
+    "id": "e-Simples Auditoria - Consulta CNPJ",
+    "title": "e-Simples Auditoria - Consulta CNPJ",
+    "url": "https://www.esimplesauditoria.com/consulta-cnpj",
+    "tipo": "Portal Web de Consulta Cadastral e Inteligência Corporativa",
+    "utilidade": "Consulta e extração de dados cadastrais, situação fiscal e quadro societário (QSA) de pessoas jurídicas brasileiras",
+    "descricao": "A ferramenta de Consulta CNPJ da e-Simples Auditoria é uma interface web voltada para a busca e consolidação de informações cadastrais de empresas registradas no Brasil. A plataforma consome e organiza dados públicos da Receita Federal e de órgãos fazendários, disponibilizando de forma estruturada a Razão Social, Nome Fantasia, situação cadastral, data de abertura, Classificação Nacional de Atividades Econômicas (CNAE principal e secundários), endereço físico completo, regime de tributação (como opção pelo Simples Nacional/MEI) e a composição do Quadro de Sócios e Administradores (QSA).",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No escopo de investigações corporativas, Due Diligence, recuperação de ativos e inteligência financeira (FinINT), a ferramenta atua como um facilitador ágil para triagem e levantamento societário. Ela permite ao analista identificar rapidamente a composição societária de uma empresa alvo, mapear administradores para realização de *pivoting* em pessoas físicas, verificar o histórico/status de atividade fiscal e validar endereços declarados para cruzamento com dados geoespaciais (GEOINT).",
+    "notes": "* A busca exige a inserção do número de CNPJ (14 dígitos) para retornar o relatório consolidado da entidade.\n* Por se tratar de um indexador intermediário de dados abertos, recomenda-se que dados críticos em auditorias formais ou relatórios periciais sejam contravalidados na base oficial da Receita Federal (Emissão de Comprovante de Inscrição e Situação Cadastral).\n* Excelente alternativa para triagem inicial rápida quando bases governamentais diretas apresentam instabilidade ou sobrecarga de CAPTCHA."
   },
   {
     "id": "Emkei.cz",
@@ -1906,6 +2205,57 @@ const TOOLS = [
     "notes": "* Devido à alta incidência de homônimos em registros públicos e processos judiciais no Brasil, o analista deve cruzar as informações obtidas (como localização, profissão ou área de atuação) para validar se os registros pertencem de fato ao alvo investigado.\n* Os dados exibidos na plataforma são baseados em indexações periódicas; portanto, para fins de comprovação legal ou em situações críticas, o analista deve extrair o número do processo ou da publicação localizado e consultá-lo diretamente na fonte primária do tribunal de origem."
   },
   {
+    "id": "eTools.ch",
+    "title": "eTools.ch",
+    "url": "https://www.etools.ch/",
+    "tipo": "Metabuscador Web Privativo",
+    "utilidade": "Mecanismo de metabusca federada para consultas simultâneas e anônimas em múltiplos motores de busca da web",
+    "descricao": "O eTools.ch é um serviço de metabusca transparente e privativo sediado na Suíça. A ferramenta atua como um agregador federado de motores de pesquisa, realizando consultas simultâneas em diversos buscadores comerciais e independentes de relevância global (como Google, Bing, Brave, Yahoo, Wikipedia, Exalead, Mojeek, entre outros). A plataforma normaliza, desduplica e reordena os resultados em uma interface centralizada e rápida, sem armazenar dados de identificação pessoal, sem registrar endereços IP ou histórico de pesquisas e sem injetar cookies persistentes de rastreamento comercial.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência de fontes abertas, o eTools.ch serve como um vetor primário eficiente na fase de reconhecimento e coleta de dados de superfície. Ao federar consultas em múltiplos indexadores em uma única busca, o analista ganha amplitude investigativa e contorna o efeito da \"bolha de filtros\" (*filter bubble*). Além disso, sua arquitetura atua como uma barreira técnica de proteção operacional (OPSEC), intermediando a busca de modo a não vincular termos sensíveis de investigação ao endereço IP ou ao perfil digital do investigador.",
+    "notes": "* A plataforma oferece opções de configuração avançada de pesquisa, permitindo que o investigador selecione manualmente quais motores de busca parceiros devem ser incluídos ou excluídos na composição dos resultados.\n* Permite a aplicação de filtros linguísticos e contextuais (como seleção de idioma, país de preferência e restrição estrita de termos entre aspas) para otimizar a precisão da varredura na web de superfície."
+  },
+  {
+    "id": "Everypixel",
+    "title": "Everypixel",
+    "url": "https://www.everypixel.com/",
+    "tipo": "Metabuscador de Imagens / Ferramenta de Análise Visual e IMINT",
+    "utilidade": "Mecanismo de busca e indexação visual reversa de banco de imagens e análise de mídias por Inteligência Artificial",
+    "descricao": "O Everypixel é um mecanismo de busca avançado e metabuscador visual alimentado por inteligência artificial, especializado em indexar, filtrar e agregar milhões de fotografias de bancos de imagens gratuitos e pagos de todo o mundo. A plataforma conta com recursos de busca reversa de imagens, classificação estética por aprendizado de máquina, detecção de padrões visuais, reconhecimento de componentes por visão computacional e identificação de imagens geradas por IA.",
+    "testada": false,
+    "tags": [
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, inteligência visual (IMINT) e verificação de mídias, o Everypixel desempenha um papel essencial no rastreamento de procedência de conteúdos gráficos. Ele permite que o analista identifique se uma imagem utilizada por um perfil sob investigação é, na realidade, uma foto de estoque comercial, uma mídia copiada de catálogos públicos ou um conteúdo gerado sinteticamente por IA, auxiliando diretamente na desarticulação de perfis falsos (*sock puppets*) e campanhas de desinformação.",
+    "notes": "* É uma ferramenta altamente recomendada para a etapa de triagem de avatares e fotos de perfil de alvos investigados, validando rapidamente se a imagem pertence a um modelo de banco de imagens antes de prosseguir com buscas biométricas mais profundas.\n* O sistema de filtros permite segmentar buscas por cor predominante, orientação e isolamento de fundo, o que agiliza o rastreamento de elementos visuais parciais em investigações de IMINT."
+  },
+  {
+    "id": "Exa (antigo Metaphor)",
+    "title": "Exa (antigo Metaphor)",
+    "url": "https://exa.ai/",
+    "tipo": "Motor de Busca Neural e Semântico Baseado em IA",
+    "utilidade": "Mecanismo de busca semântica e API projetada para recuperação de informações na web através de embeddings neurais e Large Language Models (LLMs)",
+    "descricao": "O Exa é um mecanismo de busca e API construído especificamente para modelos de inteligência artificial e analistas de dados. Diferente dos indexadores convencionais baseados em correspondência exata de palavras-chave, o Exa utiliza representações vetoriais (*embeddings*) e modelos de linguagem para processar consultas em linguagem natural ou por similaridade semântica. O sistema prevê URLs e recupera páginas web com base no significado contextual do texto, possibilitando buscas por intenção, conceito, estrutura textual ou links análogos.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "func/analise-processamento-ia",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas, o Exa é aplicado na fase de reconhecimento e coleta de inteligência em larga escala. Por operar por similaridade semântica em vez de correspondência estrita de termos, ele viabiliza a descoberta de fontes, relatórios técnicos, artigos institucionais e conteúdos correlacionados que não seriam capturados por dorks tradicionais ou buscas por palavras-chave em buscadores comerciais, refinando a identificação de alvos temáticos e conexões indiretas.",
+    "notes": "* A busca semântica funciona melhor quando alimentada com frases completas, afirmações ou descrições textuais que se assemelhem ao conteúdo da página desejada, em vez de listas isoladas de palavras-chave.\n* A plataforma oferece suporte a filtros avançados de domínio, datas de publicação e pesquisa por similaridade de URL (*similar links*), o que facilita a expansão de dados a partir de uma fonte de referência conhecida."
+  },
+  {
     "id": "Exif Viewer",
     "title": "Exif Viewer",
     "url": "https://addons.mozilla.org/pt-BR/firefox/addon/exif-viewer/",
@@ -1921,6 +2271,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "Em investigações digitais, esta extensão é amplamente utilizada nas fases de verificação de mídias, forense digital e inteligência geoespacial (GEOINT). Ela permite ao analista auditar de forma passiva e instantânea a integridade de uma evidência visual sem a necessidade de baixar o arquivo e submetê-lo a softwares externos pesados. A identificação de coordenadas GPS embutidas possibilita a plotagem imediata do local do registro em mapas, enquanto os carimbos de data/hora e dados do dispositivo auxiliam na cronolocalização e na detecção de possíveis manipulações ou fraudes em imagens de interesse.",
     "notes": "* O analista deve estar ciente de que a maioria das grandes plataformas de redes sociais (como Instagram, Facebook e X) remove automaticamente todos os metadados EXIF das imagens no momento do upload por motivos de privacidade dos usuários. Portanto, a ferramenta possui maior eficácia quando aplicada a imagens hospedadas em blogs pessoais, sites de notícias, portais governamentais ou arquivos originais obtidos diretamente de alvos.\n* A ausência de dados EXIF não significa necessariamente que a foto não possui histórico; ela pode ter sido limpa propositalmente pelo autor ou processada por um servidor web. Sempre combine a análise técnica com técnicas de busca reversa de imagens e análise contextual visual."
+  },
+  {
+    "id": "ExifData.com",
+    "title": "ExifData.com",
+    "url": "https://www.exifdata.com/",
+    "tipo": "Ferramenta Web de Forense Digital e Análise de Metadados",
+    "utilidade": "Extração, leitura e análise de metadados ocultos (EXIF, IPTC, XMP) embutidos em arquivos de imagem",
+    "descricao": "O ExifData.com é uma aplicação web voltada para a inspeção e extração de metadados técnicos incorporados em arquivos de imagem digital (como JPEG, TIFF, PNG e RAW). A ferramenta processa o arquivo submetido pelo usuário e decodifica as estruturas de dados dos padrões EXIF, IPTC e XMP, revelando parâmetros de captura da câmera/smartphone (marca, modelo, abertura, velocidade do obturador, ISO, distância focal), data e hora de criação/modificação, dados de software de edição e coordenadas geográficas de GPS (latitude, longitude e altitude).",
+    "testada": false,
+    "tags": [
+      "fonte/geoespacial",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações em fontes abertas, verificação de mídias e inteligência geoespacial (GEOINT), o ExifData.com atua como uma ferramenta prática para validação da autenticidade e contextualização de evidências visuais. A extração de dados técnicos permite ao analista realizar a cronolocalização da mídia por meio de carimbos de data/hora originais, identificar o equipamento utilizado pelo autor da foto e mapear o local exato onde o registro foi capturado a partir de coordenadas GPS embutidas, auxiliando na verificação de álibis e atribuição de conteúdo.",
+    "notes": "* A maioria das redes sociais de grande alcance (como X/Twitter, Instagram, Facebook e WhatsApp) elimina os metadados EXIF no momento do upload ou envio; a ferramenta tem eficácia máxima quando aplicada a mídias originais obtidas de blogs pessoais, fóruns, sites governamentais, repositórios em nuvem ou arquivos brutos enviados diretamente.\n* Sob a perspectiva de OPSEC, o upload de arquivos contendo informações confidenciais ou sensíveis em plataformas web de terceiros deve ser evitado; para mídias críticas, recomenda-se a extração local por meio de ferramentas de linha de comando como o ExifTool."
   },
   {
     "id": "ExifTool",
@@ -1956,6 +2323,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "Nas investigações em fontes abertas, o ExpandURL desempenha um papel crítico em inteligência de infraestrutura e na segurança das operações (OPSEC). Ele permite ao analista desmascarar links curtos coletados em perfis de alvos, e-mails ou fóruns, mapeando os domínios reais de destino e identificando possíveis vetores de phishing, malware ou links parametrizados para rastreamento. Ao fazer isso de forma intermediada, a ferramenta evita que a máquina do investigador interaja diretamente com o servidor final, mitigando o risco de detecção por contra-inteligência ou acionamento de armadilhas digitais (*honeytokens*).",
     "notes": "* Ao utilizar a ferramenta, o endereço IP registrado nos logs do serviço de encurtamento será o dos servidores do ExpandURL, mantendo a identidade técnica do analista preservada durante o processo de expansão.\n* Recomenda-se analisar cuidadosamente a URL final expandida em busca de parâmetros de rastreamento (como variáveis de UTM ou IDs de token), pois estes elementos podem revelar conexões com outras campanhas digitais ou contas específicas associadas ao criador do link."
+  },
+  {
+    "id": "Export Comments",
+    "title": "Export Comments",
+    "url": "https://exportcomments.com/",
+    "tipo": "Ferramenta Web de Extração e Raspagem de Dados (Scraper SaaS)",
+    "utilidade": "Extração automatizada e exportação estruturada de comentários, respostas e dados de engajamento de múltiplas plataformas de redes sociais",
+    "descricao": "O Export Comments é um serviço baseado na web projetado para coletar, extrair e exportar comentários, respostas e metadados de engajamento de postagens em diversas redes sociais (incluindo Instagram, YouTube, TikTok, Facebook, Twitter/X e Reddit). A ferramenta processa a URL fornecida e compila as interações da postagem em planilhas estruturadas (Excel/CSV), contendo nomes de perfil, identificadores de usuário (@handles), carimbos de data/hora (timestamps), textos dos comentários e contagens de reações/curtidas.",
+    "testada": false,
+    "tags": [
+      "fonte/redes-sociais",
+      "func/scrapers-automacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "Em investigações em mídias sociais (SOCMINT), análise de redes de influência, rastreamento de campanhas de desinformação e levantamento de vínculos humanos, o Export Comments automatiza o processo de coleta massiva de interações públicas. Em vez de registrar manualmente centenas ou milhares de comentários em publicações de interesse, o analista obtém uma base estruturada que viabiliza a análise de sentimento, a identificação de redes de apoio/ataque (*botnets* ou *troll farms*) e o mapeamento de perfis que interagem sistematicamente com o alvo investigado.",
+    "notes": "* Os relatórios exportados em CSV ou XLSX podem ser importados diretamente em softwares de análise de grafos e redes (como Gephi ou Maltego) para mapear nós de interação e perfis centrais em discussões online.\n* Por se tratar de um scraper centralizado em nuvem, minimiza a exposição do IP real do analista nas plataformas de mídia social consultadas durante a raspagem dos dados.\n* Em publicações de grande engajamento com dezenas de milhares de comentários, a limitação da versão gratuita pode exigir o uso de scripts locais ou a contratação de planos avulsos."
   },
   {
     "id": "ExpressVPN",
@@ -2010,6 +2394,26 @@ const TOOLS = [
     ],
     "utilidade_Osint": "Em investigações de fontes abertas, este utilitário é empregado na fase de triagem, coleta passiva e mapeamento de infraestrutura digital. Ele permite ao analista extrair em lote centenas de links contidos em páginas complexas (como listas de resultados de motores de busca, diretórios, perfis ou fóruns) sem a necessidade de capturá-los manualmente. Como o script atua estritamente sobre o código que já foi renderizado pelo navegador, o processo não gera novas requisições de rede ou tráfego adicional direcionado ao servidor do alvo, mitigando riscos de detecção.",
     "notes": "* Por operar localmente no ambiente do cliente (Client-Side), a extração preserva a segurança das operações (OPSEC), pois os administradores do site alvo não possuem meios técnicos para diferenciar se o investigador apenas visualizou a página ou se executou o comando para extrair os links em lote.\n* O script demonstra grande eficácia em portais que utilizam rolagem infinita (*infinite scroll*) ou carregamento dinâmico por chamadas AJAX; o analista pode navegar pela página até que todo o conteúdo desejado seja carregado na tela e, em seguida, rodar o script para consolidar todos os links gerados em uma única saída limpa."
+  },
+  {
+    "id": "FAA Aircraft Registry - Name Inquiry",
+    "title": "FAA Aircraft Registry - Name Inquiry",
+    "url": "https://registry.faa.gov/aircraftinquiry/Search/NameInquiry",
+    "tipo": "Portal de Consulta em Base de Dados Pública Governamental",
+    "utilidade": "Consulta e identificação de registros de propriedade de aeronaves civis nos Estados Unidos por nome de pessoa física ou razão social",
+    "descricao": "O *Name Inquiry* do Registro de Aeronaves da Federal Aviation Administration (FAA) é o mecanismo de consulta pública oficial do governo dos Estados Unidos para verificar a titularidade e o registro de aeronaves civis norte-americanas (prefixo N-Number). O sistema permite realizar pesquisas estruturadas a partir do nome de indivíduos ou da razão social de empresas, retornando uma listagem completa das aeronaves registradas sob aquela titularidade, com detalhes técnicos de fabricante, modelo, número de série, ano de fabricação, tipo de motor, status do certificado de aeronavegabilidade e endereço cadastral declarado.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/empresa",
+      "alvo/veiculo",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações patrimoniais transnacionais, auditorias de *compliance*, Due Diligence corporativa e rastreamento de ativos de alto valor (*Asset Recovery*), o serviço de busca por nome da FAA funciona como um poderoso indexador reverso. Ele permite descobrir aeronaves executivas, comerciais ou de aviação geral de propriedade direta ou indireta de alvos de interesse (indivíduos de alto patrimônio, empresas ou *trusts* fiduciários). Os números de cauda (*N-Numbers*) e números de série (MSN) obtidos operam como chaves primárias de pivotagem para sistemas de telemetria ADS-B, mapeamento de viagens executivas e cruzamento em bases societárias globais.",
+    "notes": "* É muito comum que aeronaves registradas nos EUA pertençam a bancos fiduciários ou entidades de custódia (*Trustees*, como *Wells Fargo Bank Northwest NA Trustee* ou *Bank of Utah Trustee*) para preservar o sigilo do proprietário real. Nesses casos, o registro da FAA indicará a entidade fiduciária, exigindo cruzamento secundário com contratos de operação, licenças e logs de planos de voo para identificar o operador de fato.\n* Os prefixos *N-Number* obtidos na consulta podem ser inseridos imediatamente em plataformas de rastreamento de voos (como FlightAware, ADS-B Exchange e RadarBox) para auditar o histórico de rotas, movimentação transfronteiriça e aeródromos frequentados pelo alvo.\n* Para otimizar os resultados com nomes comuns, a plataforma permite filtros complementares por estado ou cidade dos EUA, o que ajuda a refinar a busca quando o analista dispõe de dados geográficos preliminares do investigado."
   },
   {
     "id": "FaceCheck.id",
@@ -2233,6 +2637,41 @@ const TOOLS = [
     "notes": "* Durante a auditoria de OPSEC, o analista deve verificar se o *Visitor ID* gerado se altera após reiniciar o navegador, mudar o perfil de navegação ou ativar uma VPN. Se o ID permanecer estático, significa que o ambiente de investigação está vulnerável ao rastreamento persistente por parte do alvo.\n* A plataforma também possui módulos específicos para acusar a presença de emuladores, ferramentas de automação (como Puppeteer ou Selenium) e o uso de abas anônimas, servindo como um excelente termômetro para testar a credibilidade técnica de contas de cobertura (*sock puppets*) ou de *scrapers* personalizados."
   },
   {
+    "id": "Flickr Map",
+    "title": "Flickr Map",
+    "url": "https://www.flickr.com/map/",
+    "tipo": "Plataforma Web de Mapeamento e Inteligência Geoespacial (GEOINT / SOCMINT)",
+    "utilidade": "Exploração geoespacial e busca visual de fotografias geolocalizadas em escala global",
+    "descricao": "O Flickr Map é a interface cartográfica interativa da plataforma de compartilhamento de fotos Flickr. O recurso permite visualizar, explorar e pesquisar milhões de imagens e vídeos enviados por usuários que contêm dados de geolocalização (*geotags*) ou coordenadas GPS vinculadas, plotando as mídias diretamente sobre um mapa global navegável.",
+    "testada": false,
+    "tags": [
+      "fonte/redes-sociais",
+      "fonte/geoespacial",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, inteligência geoespacial (GEOINT) e monitoramento de mídias sociais (SOCMINT), o Flickr Map atua como uma rica fonte primária para reconhecimento de locais, identificação de rotinas e levantamento de evidências visuais em pontos geográficos específicos. A ferramenta permite que analistas realizem buscas refinadas por palavras-chave, datas ou categorias dentro de um determinado raio territorial, viabilizando a obtenção de perspectivas visuais em nível de solo de instalações, pontos de interesse e eventos públicos que muitas vezes não estão disponíveis em serviços convencionais de imagens de satélite.",
+    "notes": "* Excelente para complementar investigações de verificação de marcos visuais (*landmarks*), arquitetura e condições climáticas em datas específicas, auxiliando na corroboração de álibis e cronologias.\n* A plataforma do Flickr costuma preservar metadados técnicos adicionais nas páginas originais das fotografias (como modelo de câmera, abertura, distância focal e horário exato), fornecendo subsídios adicionais para análise de metadados quando o usuário clica na mídia indexada no mapa."
+  },
+  {
+    "id": "Flickr The Commons",
+    "title": "Flickr The Commons",
+    "url": "https://www.flickr.com/commons/",
+    "tipo": "Arquivo Digital de Mídia Histórica / Repositório Visual",
+    "utilidade": "Pesquisa, recuperação e análise de acervos fotográficos históricos públicos e imagens de domínio público sem restrições de direitos autorais conhecidas",
+    "descricao": "O Flickr The Commons é um projeto e repositório público criado para compartilhar acervos fotográficos e documentos visuais históricos provenientes de arquivos, bibliotecas, hemerotecas e museus de diversas partes do mundo. Lançado inicialmente em parceria com a Biblioteca do Congresso dos Estados Unidos, o portal reúne centenas de milhares de imagens que não possuem restrições conhecidas de direitos autorais, permitindo acesso aberto, pesquisa textual e catalogação colaborativa de mídias históricas.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, inteligência de imagens (IMINT) e checagem de fatos (*fact-checking*), o Flickr The Commons atua como fonte primária confiável de verificação histórica e proveniência visual. A ferramenta permite correlacionar fotos antigas reaproveitadas em campanhas de desinformação com seus registros institucionais originais, identificar locais e patrimônios arquitetônicos por meio de comparações temporais de terreno e rastrear metadados históricos catalogados por instituições oficiais de memória.",
+    "notes": "* Grande parte das imagens disponibilizadas pelas instituições parceiras possui metadados detalhados de época, incluindo datas estimadas, locais de registro e anotações originais de catálogo, facilitando o cruzamento com outros registros históricos.\n* A plataforma conta com anotações e tags colaborativas da comunidade, o que auxilia na identificação de pessoas, uniformes, embarcações, veículos e localidades específicas que não constavam nos registros primários das instituições."
+  },
+  {
     "id": "FlightAware Photos (pt.flightaware.com/photos/)",
     "title": "FlightAware Photos (pt.flightaware.com/photos/)",
     "url": "https://pt.flightaware.com/photos/",
@@ -2360,6 +2799,22 @@ const TOOLS = [
     "notes": ""
   },
   {
+    "id": "Frinkiac",
+    "title": "Frinkiac",
+    "url": "https://frinkiac.com/",
+    "tipo": "Motor de Busca de Mídia / Acervo Digital de Transcrições e Imagens",
+    "utilidade": "Indexação, transcrição e busca de fotogramas (frames) e citações de episódios da animação The Simpsons",
+    "descricao": "O Frinkiac é uma plataforma de busca e indexação visual dedicada a mapear e correlacionar legendas, citações textuais e fotogramas (*screencaps*) de quase duas décadas de episódios da animação *The Simpsons*. A plataforma analisa o roteiro e as legendas temporais para permitir que usuários encontrem o momento exato em que uma frase ou diálogo ocorre, gerando imagens estáticas e GIFs com legendas embutidas.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas e análise de desinformação/IMINT, o Frinkiac serve como base de referência cultural e verificação de mídias virais. A ferramenta permite identificar a origem exata de memes, capturas de tela e citações atribuídas à série que frequentemente circulam em campanhas de desinformação, teorias conspiratórias (\"previsões dos Simpsons\") ou discussões em fóruns e redes sociais, viabilizando a validação rápida de sua autenticidade e contexto original.",
+    "notes": "* Útil para checagem de fatos (*fact-checking*) ao desmentir imagens adulteradas ou montagens associadas à série em redes sociais.\n* A plataforma fornece os códigos de episódio e timestamps precisos, permitindo cruzar a informação com registros oficiais de exibição e roteiros originais."
+  },
+  {
     "id": "gau (getallurls)",
     "title": "gau (getallurls)",
     "url": "https://github.com/lc/gau",
@@ -2475,6 +2930,59 @@ const TOOLS = [
     "notes": "* Os registros gerados são válidos estritamente do ponto de vista matemático e algorítmico, não possuindo vinculação factual com cadastros ativos na base da Receita Federal.\n* A ferramenta deve ser integrada ao ecossistema Obsidian para catalogar insumos de apoio ao desenvolvimento de testes de validação cadastral e auditoria de formulários em ambientes controlados."
   },
   {
+    "id": "Getúlio AI",
+    "title": "Getúlio AI",
+    "url": "https://getulio.ai/",
+    "tipo": "Plataforma Web de Consulta Jurídica e Assistente Baseado em Inteligência Artificial",
+    "utilidade": "Consulta e interpretação de processos trabalhistas, histórico litigioso de CNPJs e extração de dados jurídicos assistida por Inteligência Artificial",
+    "descricao": "O Getúlio AI é uma plataforma web orientada por inteligência artificial e processamento de linguagem natural (PLN) voltada para o ecossistema jurídico-trabalhista brasileiro. A ferramenta atua na consulta e interpretação de ações e litígios trabalhistas a partir do número do processo judicial, CPF ou CNPJ. Ela consome dados de sistemas processuais públicos (como tribunais do trabalho - TRTs e TST), estruturando informações como fase processual atual, valor da causa, histórico de movimentações, identificação de partes e advogados envolvidos, além de consolidar métricas de contencioso corporativo (volume total de processos por empresa e valores médios de acordos).",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "func/analise-processamento-ia",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No escopo de investigações corporativas, Due Diligence, análise patrimonial e levantamento de passivos trabalhistas, o Getúlio AI serve como um vetor ágil de busca e sumarização de inteligência jurídica. O analista pode utilizar a ferramenta para mapear o passivo litigioso de uma empresa-alvo (via CNPJ), identificar partes correlacionadas a indivíduos sob investigação (via CPF ou numeração da ação) e converter termos processuais herméticos em resumos estruturados e de fácil assimilação para a elaboração de relatórios.",
+    "notes": "* A busca por CNPJ é particularmente útil em investigações patrimoniais para quantificar o risco financeiro e o histórico de cumprimento de obrigações legais por parte de uma organização sob análise.\n* Por se tratar de um processador assistido por inteligência artificial intermediário, recomenda-se contravalidar dados processuais críticos ou sentenças definitivas diretamente nos portais do Processo Judicial Eletrônico (PJe) dos tribunais competentes antes de incluí-los em relatórios formais.\n* O analista deve ter cautela ao submeter dados altamente sigilosos em plataformas de terceiros baseadas em nuvem, garantindo que identificadores sensíveis não infrinjam as diretrizes de privacidade da operação."
+  },
+  {
+    "id": "Gibiru",
+    "title": "Gibiru",
+    "url": "https://gibiru.com/",
+    "tipo": "Mecanismo de Busca Privado e Indexador Web",
+    "utilidade": "Motor de busca privado voltado para recuperação de resultados da web não filtrados, sem rastreamento de usuário ou registro de logs",
+    "descricao": "O Gibiru é um mecanismo de busca na web focado em privacidade e anonimato, em operação desde 2009. A plataforma atua como um intermediário de consultas, consultando algoritmos de busca convencionais e bases de dados abertas sem registrar o endereço IP do usuário, sem armazenar consultas em histórico de servidores e sem injetar cookies de rastreamento ou identificadores de perfil comercial. O serviço também indexa páginas e conteúdos que podem sofrer despriorização ou censura algorítmica em buscadores comerciais comuns.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência de fontes abertas, o Gibiru é utilizado como uma camada primária de coleta passiva e pesquisa de superfície. Ele viabiliza buscas amplas e neutras na internet sem que as consultas fiquem atreladas à identidade real do investigador ou influenciadas por histórico de navegação anterior (*bolha de filtros*). Além disso, fortalece a segurança operacional (OPSEC) ao evitar que termos de busca sensíveis ou investigativos sejam associados ao perfil do analista por grandes plataformas de publicidade digital.",
+    "notes": "* Por não personalizar os resultados com base em localização ou histórico, o Gibiru oferece respostas neutras e objetivas para pesquisas globais, sendo útil para confrontar variações de resultados encontradas no Google ou Bing.\n* Pode ser integrado diretamente à barra de pesquisas de navegadores focados em privacidade (como LibreWolf, Brave ou Firefox configurado) para padronizar pesquisas de rotina com menor exposição de metadados."
+  },
+  {
+    "id": "GifCities",
+    "title": "GifCities",
+    "url": "https://gifcities.org/",
+    "tipo": "Arquivo Digital e Motor de Busca de Mídia Histórica",
+    "utilidade": "Preservação histórica, busca reversa e recuperação de GIFs animados e elementos gráficos da era inicial da web (GeoCities)",
+    "descricao": "O GifCities é um projeto de preservação digital e mecanismo de busca desenvolvido pelo Internet Archive, criado para indexar e resgatar o acervo visual de páginas do extinto serviço de hospedagem Yahoo! GeoCities. A plataforma extrai e cataloga milhões de GIFs animados, gráficos e elementos visuais da era inicial da internet (décadas de 1990 e 2000), vinculando cada artefato às URLs e páginas originais preservadas no acervo do Wayback Machine.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, preservação de memória digital e análise de mídias (IMINT), o GifCities funciona como um repositório arqueológico da web. A ferramenta viabiliza o rastreamento da proveniência histórica de gráficos antigos, logotipos primitivos, banners e ilustrações reutilizadas fora de contexto em campanhas de desinformação ou sites legados, permitindo aos analistas correlacionar elementos visuais a páginas originais e identificar metadados de domínio e contexto histórico de hospedagem.",
+    "notes": "* Cada imagem indexada inclui um link direto para a página preservada correspondente no Wayback Machine, viabilizando o *pivoting* para investigar o código-fonte HTML, e-mails de contato antigos, nomes de usuários e conteúdos contextuais da página do autor original.\n* A plataforma é útil para desmistificar mídias visuais e rastrear o surgimento de memes e elementos estéticos clássicos que voltam a circular na internet atual."
+  },
+  {
     "id": "GitDorks",
     "title": "GitDorks",
     "url": "https://dorks.s1rn3tz.ovh/gitdorks",
@@ -2537,6 +3045,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No ecossistema de inteligência em fontes abertas, o `sed` atua como um motor de higienização e padronização de dados brutos na fase pós-coleta. É frequentemente empregado para manipular arquivos massivos que excedem a capacidade de editores visuais, permitindo ao analista limpar *data dumps* de vazamentos, isolar strings de interesse (como hashes de senhas, e-mails ou números de telefone), remover caracteres especiais redundantes e formatar saídas brutas em listas limpas prontas para importação e cruzamento no Obsidian. Por operar de maneira 100% offline, garante a integridade da OPSEC do investigador ao não expor os dados a serviços terceiros em nuvem.",
     "notes": "* Sua capacidade de substituição *in-place* (utilizando a flag `-i`) permite modificar arquivos gigantescos diretamente no disco, economizando memória RAM e agilizando a formatação de tabelas estruturadas para relatórios.\n* Pode ser encadeado com outras ferramentas de terminal para automatizar a conversão de relatórios de texto em blocos de notas limpos com sintaxe Markdown compatível com o Obsidian."
+  },
+  {
+    "id": "GNU Wget",
+    "title": "GNU Wget",
+    "url": "https://www.gnu.org/software/wget/",
+    "tipo": "Utilitário de Linha de Comando para Download e Web Crawling",
+    "utilidade": "Download não interativo de arquivos e páginas web via HTTP/HTTPS/FTP, coleta massiva de recursos e espelhamento recursivo de websites",
+    "descricao": "O GNU Wget é uma ferramenta de linha de comando desenvolvida pelo Projeto GNU para o download não interativo de arquivos através dos protocolos HTTP, HTTPS e FTP. O utilitário foi projetado para operar com alta resiliência em conexões instáveis, suportando retomada de transferências interrompidas, limitação de taxa de download, configuração de cabeçalhos/cookies personalizados e navegação recursiva em estruturas de diretórios web e FTP.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "func/scrapers-automacao",
+      "plataforma/terminal",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações baseadas em fontes abertas e coleta técnica de dados, o Wget atua na fase de aquisição passiva e automação de extração em larga escala. Ele possibilita a clonagem ou espelhamento completo de páginas web e portais públicos para análise offline posterior, o download recursivo de arquivos e documentos (como PDFs, planilhas e imagens) indexados em diretórios expostos, e a preservação forense de evidências digitais diretamente no terminal.",
+    "notes": "* É fundamental definir parâmetros de profundidade (`-l`) e flags de não propagação a diretórios superiores (`-np`) durante downloads recursivos (`-r`) para evitar loops infinitos ou downloads não intencionais fora do domínio de escopo.\n* Permite alterar o cabeçalho *User-Agent* (`--user-agent`) e utilizar servidores de proxy (`-e use_proxy=yes -e http_proxy=...`), o que auxilia na conformidade das regras de OPSEC e na simulação de tráfego de navegadores comuns.\n* A combinação do Wget com comandos utilitários locais (como `grep`, `sed` e `awk`) viabiliza a criação de *pipelines* eficientes para extração e filtragem imediata de informações estruturadas."
   },
   {
     "id": "GoFullPage - Full Page Screen Capture",
@@ -3055,6 +3580,43 @@ const TOOLS = [
     "notes": "* Por depender de técnicas de raspagem (web scraping) na interface pública de serviços de terceiros (Hurricane Electric), a ferramenta está sujeita a sofrer bloqueios temporários de requisições (rate limiting) por parte do portal consultado se for executada de forma massiva sem intervalos ou sem o suporte de proxies.\n* O HEDnsExtractor oferece suporte nativo e opcional para enriquecimento de dados por meio da API do VirusTotal (através das flags `-vt` e `-vt-api-key`), permitindo que a lista de domínios extraídos seja automaticamente confrontada com pontuações de reputação e detecção de malwares."
   },
   {
+    "id": "Heritrix",
+    "title": "Heritrix",
+    "url": "https://github.com/internetarchive/heritrix3",
+    "tipo": "Ferramenta de Web Crawling e Indexação Massiva",
+    "utilidade": "Coleta automatizada em larga escala e arquivamento web massivo de páginas e domínios da internet",
+    "descricao": "O Heritrix é o rastreador web (web crawler) de código aberto em escala de produção desenvolvido e utilizado pelo Internet Archive. Projetado para coletar e arquivar páginas e recursos da World Wide Web, o software opera de forma estruturada para seguir links recursivamente a partir de sementes iniciais (*seed URLs*), gerando arquivos padronizados de preservação digital, como os formatos WARC e ARC, que registram o tráfego HTTP bruto e o código-fonte integral das páginas visitadas.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "fonte/arquivos-noticias",
+      "func/scrapers-automacao",
+      "plataforma/desktop",
+      "plataforma/terminal",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas e fixação probatória, o Heritrix é empregado em cenários que demandam o monitoramento e espelhamento integral de grandes conjuntos de domínios ou portais governamentais e corporativos (alvo/dominio). Ele permite a captura automatizada de conteúdos históricos e estruturas de sites antes que sejam alterados ou removidos da rede, servindo como base técnica para análises retrospectivas em investigações complexas.",
+    "notes": "* O Heritrix utiliza uma interface de gerenciamento baseada em navegador web para configurar e monitorar o progresso dos rastreamentos em tempo real, permitindo pausar, ajustar ou auditar os arquivos coletados.\n* Para evitar bloqueios por parte dos servidores de destino ou o esgotamento dos recursos locais, é fundamental configurar adequadamente as políticas de exclusão de robôs (robots.txt) e definir limites de taxa de requisição (*crawl rate*)."
+  },
+  {
+    "id": "Historypin",
+    "title": "Historypin",
+    "url": "https://www.historypin.org/",
+    "tipo": "Repositório Colaborativo e Plataforma de Inteligência Geoespacial Histórica (GEOINT/IMINT)",
+    "utilidade": "Geolocalização de fotos, vídeos e áudios históricos mapeados sobre coordenadas geográficas e linhas do tempo interativas",
+    "descricao": "O Historypin é uma plataforma colaborativa e arquivo digital aberto que mapeia documentos históricos, fotografias antigas, gravações de áudio e relatos em camadas cartográficas e cronológicas interativas. Desenvolvido em parceria com arquivos públicos, bibliotecas, museus e usuários do mundo inteiro, o serviço projeta conteúdos visuais e históricos diretamente sobre mapas digitais e interfaces de Street View, permitindo a comparação espacial e temporal da evolução urbana e rural ao longo dos anos.",
+    "testada": false,
+    "tags": [
+      "fonte/geoespacial",
+      "fonte/arquivos-noticias",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, com ênfase em Geointeligência (GEOINT) e Inteligência de Imagens (IMINT), o Historypin atua como uma ferramenta analítica de verificação de terreno e reconstituição histórica de cenários. Ele possibilita a checagem temporal de fachadas, ruas, marcos arquitetônicos e pontos de referência geográficos, auxiliando na verificação da autenticidade de fotos antigas, na datação de eventos e no desmentido de mídias descontextualizadas ou manipuladas.",
+    "notes": "* A ferramenta conta com um recurso de controle de transparência (*slider*) que permite sobrepor uma foto histórica à visualização atual do Street View, facilitando a identificação de mudanças estruturais em edificações e relevos.\n* Como parte dos dados é inserida de forma comunitária (*crowdsourcing*), é fundamental validar a precisão da localização e das datas atribuídas através de fontes primárias e registros oficiais de arquivos públicos."
+  },
+  {
     "id": "hns.to",
     "title": "hns.to",
     "url": "https://hns.to",
@@ -3105,6 +3667,40 @@ const TOOLS = [
     ],
     "utilidade_Osint": "Crucial para a fase de validação ativa e mapeamento de pegada digital. A ferramenta permite determinar com precisão em quais plataformas e redes sociais um endereço de e-mail específico possui cadastro ativo, utilizando endpoints de autenticação de forma silenciosa e passiva para o alvo, gerando novos caminhos de investigação (pivoting).",
     "notes": "* Devido à natureza das consultas, que envolvem o envio rápido de requisições sequenciais para múltiplos servidores web externos, o uso do Holehe a partir de um único IP de origem pode resultar em bloqueios temporários (rate limiting) ou no acionamento de mecanismos anti-bot (CAPTCHAs). O emprego de proxies ou VPNs rotativas é frequentemente adotado para contornar essa limitação técnica.\n* Como os sites alteram periodicamente a lógica de suas páginas de login e recuperação de senha, módulos individuais da ferramenta podem parar de funcionar temporariamente até que novas atualizações de código sejam lançadas no repositório oficial."
+  },
+  {
+    "id": "Hootsuite",
+    "title": "Hootsuite",
+    "url": "https://www.hootsuite.com/",
+    "tipo": "Painel de Monitoramento e Inteligência em Mídias Sociais (SOCMINT Dashboard)",
+    "utilidade": "Monitoramento de redes sociais, escuta ativa (social listening), agendamento e análise de métricas em múltiplas plataformas",
+    "descricao": "O Hootsuite é uma plataforma de gerenciamento, escuta ativa (*social listening*) e monitoramento integrado de redes sociais. A ferramenta permite conectar múltiplos perfis e redes (como X/Twitter, Facebook, Instagram, LinkedIn, YouTube e TikTok) em um painel centralizado e modular, viabilizando o acompanhamento simultâneo de feeds, palavras-chave, hashtags, menções a marcas ou indivíduos e interações em tempo real.",
+    "testada": false,
+    "tags": [
+      "fonte/redes-sociais",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/pago"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas voltadas para mídias sociais (SOCMINT), o Hootsuite funciona como um centro de escuta ativa e coleta estruturada de dados. Ele permite aos analistas rastrear a disseminação de narrativas, monitorar simultaneamente postagens e reações associadas a alvos ou eventos críticos, identificar padrões de engajamento e auditar menções públicas a entidades corporativas ou pessoas físicas em diversas plataformas sociais a partir de um único ambiente unificado.",
+    "notes": "* A criação de colunas de monitoramento (*streams*) com operadores de busca e termos booleanos facilita a filtragem de ruído em eventos com alto volume de publicações.\n* A utilização de contas corporativas de cobertura (*sock puppets*) conectadas à plataforma deve respeitar as diretrizes de OPSEC para evitar o cruzamento inadvertido de credenciais ou dados do investigador com os perfis monitorados."
+  },
+  {
+    "id": "Hostinger WHOIS Lookup",
+    "title": "Hostinger WHOIS Lookup",
+    "url": "https://www.hostinger.com/br/whois",
+    "tipo": "Ferramenta Web de Consulta WHOIS e Infraestrutura de Domínios",
+    "utilidade": "Consulta e verificação de dados cadastrais, técnicos e disponibilidade de nomes de domínio via protocolo WHOIS",
+    "descricao": "A ferramenta WHOIS da Hostinger é uma interface web pública projetada para a consulta de registros do protocolo WHOIS em diversas extensões de domínios genéricos (gTLDs) e de código de país (ccTLDs). O serviço consulta os servidores de registro autoritativos para recuperar informações técnicas e cadastrais atreladas a um domínio, tais como servidor de registro (*registrar*), servidores de nomes de domínio (DNS/Name Servers), status de proteção, datas de criação, atualização e expiração, além de eventuais contatos públicos do titular.",
+    "testada": false,
+    "tags": [
+      "alvo/dominio",
+      "func/infraestrutura-cybint",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações cibernéticas (CYBINT), reconhecimento de infraestrutura de rede e combate a fraudes digitais, o buscador WHOIS da Hostinger serve como uma fonte direta para triagem técnica preliminar. Ele possibilita a validação de atividade de endereços web suspeitos, identificação de servidores de hospedagem e DNS associados, e determinação da janela temporal de registro do ativo, auxiliando na correlação de campanhas de phishing ou páginas recém-criadas.",
+    "notes": "* Devido à conformidade com regulações globais de privacidade (como GDPR) e serviços comuns de *WHOIS Privacy/Proxy*, dados pessoais (nomes, e-mails e telefones do registrante) frequentemente aparecem mascarados ou ocultados.\n* A ferramenta é ideal para consultas rápidas durante a fase inicial de reconhecimento (*footprinting*), servindo de ponte para consultas DNS mais detalhadas (como mapeamento de registros A, MX e TXT)."
   },
   {
     "id": "Hugging Face",
@@ -3179,6 +3775,23 @@ const TOOLS = [
     "notes": ""
   },
   {
+    "id": "I Search From",
+    "title": "I Search From",
+    "url": "https://isearchfrom.com/pt-BR",
+    "tipo": "Ferramenta Web de Simulação e Parametrização de Buscas Regionais",
+    "utilidade": "Simulação de resultados de pesquisas no Google a partir de diferentes localizações geográficas, idiomas e dispositivos sem personalização local",
+    "descricao": "O I Search From é uma ferramenta web projetada para permitir que usuários e analistas simulem buscas no mecanismo de pesquisa do Google a partir de localizações geográficas específicas (país, estado ou cidade), idiomas definidos e diferentes tipos de dispositivos (desktop, mobile ou tablet). A plataforma injeta parâmetros precisos de geolocalização (*UULE*, *gl*, *hl* e *near*) nas requisições do Google, exibindo a página exata de resultados (SERP) que um usuário situado naquela localidade veria.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "Em investigações em fontes abertas, o I Search From é essencial para contornar a \"bolha de filtros\" (*filter bubble*) e os vieses algorítmicos decorrentes do endereço IP ou histórico de navegação do investigador. Ele possibilita a coleta de dados de inteligência regionalizada, como notícias locais, anúncios segmentados, empresas de fachada e resultados restritos a determinadas jurisdições, sem a necessidade imediata de configurar túneis VPN para cada localidade geográfica que se deseja simular.",
+    "notes": "* A ferramenta é ideal para verificar o posicionamento regional de sites, portais de notícias locais ou perfis de empresas sob investigação em cidades ou países específicos.\n* Recomenda-se utilizar os operadores avançados do Google (*Google Dorks*) diretamente no campo de pesquisa para refinar e potencializar a extração de documentos e páginas segmentadas."
+  },
+  {
     "id": "i2 Analyst's Notebook",
     "title": "i2 Analyst's Notebook",
     "url": "https://i2group.com/i2-analysts-notebook",
@@ -3227,6 +3840,46 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações em fontes abertas e inteligência de ameaças cibernéticas (Cyber Threat Intelligence), o I2P Search fornece um ponto de partida ágil para identificar a presença de comunidades clandestinas, fóruns de discussão ou repositórios contendo vazamentos corporativos que utilizam a infraestrutura distribuída e criptografada do ecossistema I2P. Ele mitiga a necessidade de inicializar e sincronizar um roteador local nativo na fase exploratória da coleta de dados, otimizando o levantamento inicial de ativos e inteligência de alvos.",
     "notes": "* Embora as pesquisas de palavras-chave e a leitura dos metadados HTML indexados ocorram diretamente na surface web, a tentativa de acessar os hiperlinks diretos (.i2p) listados nos resultados exigirá que o analista tenha um proxy ou o roteador oficial I2P ativado e configurado em sua máquina de investigação.\n* É recomendável correlacionar termos de busca específicos (como codinomes de alvos, e-mails ou hashes) com consultas no diretório para identificar possíveis espelhamentos ou menções em redes de comunicação anti-censura."
+  },
+  {
+    "id": "IAGRO - Consulta de Ficha Sanitária Animal",
+    "title": "IAGRO - Consulta de Ficha Sanitária Animal",
+    "url": "https://www.servicos.iagro.ms.gov.br/ficha",
+    "tipo": "Portal Governamental de Defesa Sanitária Agropecuária e Controle Cadastral",
+    "utilidade": "Consulta e emissão de Ficha Sanitária Animal e extrato de movimentação de rebanhos em propriedades rurais no estado de Mato Grosso do Sul",
+    "descricao": "O portal de serviços da Agência Estadual de Defesa Sanitária Animal e Vegetal do Estado de Mato Grosso do Sul (IAGRO) disponibiliza a consulta pública e emissão da Ficha Sanitária Animal. A ferramenta oficial permite verificar a regularidade sanitária, a evolução e o saldo de rebanhos (bovinos, bubalinos, equinos, entre outros) associados a propriedades rurais e produtores cadastrados no estado. O sistema consolida dados sobre vacinações obrigatórias (como febre aftosa e brucelose), saldo por espécie/categoria e histórico de trânsito agropecuário.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/empresa",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações patrimoniais, rastreamento de ativos agropecuários, due diligence do agronegócio e combate à lavagem de dinheiro no setor rural, a ferramenta serve como vetor de inteligência de alta fidelidade. Ela permite quantificar o rebanho ativo de um alvo (pessoa física ou jurídica), identificar propriedades rurais correlacionadas no estado do Mato Grosso do Sul e estimar a capacidade econômica e patrimonial real de produtores agrícolas a partir do estoque de semoventes declarado ao órgão estadual.",
+    "notes": "* Parâmetros de rastreamento de marketing (como `?utm_source=chatgpt.com`) presentes na URL de origem devem ser removidos para preservar a limpeza do link e evitar o envio desnecessário de telemetria analítica aos servidores de destino.\n* A consulta exige parâmetros específicos de entrada, tais como o número da inscrição do produtor, código do estabelecimento rural ou identificador fiscal (CPF/CNPJ), combinados com validações de segurança da sessão.\n* Recomenda-se o cruzamento dos dados sanitários obtidos com bases fundiárias e ambientais (como SNCR, SIGEF e CAR) para consolidar a extensão territorial da propriedade com o volume de cabeças de gado sustentadas na área."
+  },
+  {
+    "id": "ICIJ Offshore Leaks Database",
+    "title": "ICIJ Offshore Leaks Database",
+    "url": "https://offshoreleaks.icij.org/search",
+    "tipo": "Banco de Dados Aberto e Plataforma de Jornalismo Investigativo / Análise de Vínculos",
+    "utilidade": "Pesquisa, correlação e visualização em grafos de empresas offshore, trustes, intermediários e beneficiários finais a partir de megavazamentos financeiros internacionais",
+    "descricao": "O Offshore Leaks Database é uma plataforma de busca e análise de inteligência financeira mantida pelo International Consortium of Investigative Journalists (ICIJ). O portal disponibiliza dados públicos e desidentificados extraídos de grandes vazamentos de paraísos fiscais — incluindo investigações históricas como Panama Papers, Pandora Papers, Paradise Papers, Bahamas Leaks e FinCEN Files. A base consolida registros estruturados sobre centenas de milhares de entidades offshore, intermediários legais, diretores nomeados e beneficiários finais, oferecendo tanto um motor de busca textual quanto uma ferramenta interativa de visualização em grafos de rede.",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "alvo/financeiro-crypto",
+      "fonte/vazamentos-darkweb",
+      "func/busca-identificacao",
+      "func/analise-visualizacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No ecossistema de inteligência financeira (FinINT), combate à lavagem de dinheiro (AML), Due Diligence e investigações patrimoniais transnacionais, a base do ICIJ atua como ferramenta primária de *pivoting* para mapear estruturas societárias ocultas. Ela viabiliza a identificação de empresas de fachada criadas para ocultar patrimônio, conecta figuras públicas (políticos, empresários e indivíduos sancionados) a prestadores de serviços fiduciários internacionais e permite rastrear o fluxo patrimonial direcionado a jurisdições de sigilo.",
+    "notes": "* A existência de uma pessoa ou empresa na base não implica automaticamente a prática de atos ilícitos, visto que a abertura e posse de companhias offshore podem ser legais dependendo do regime tributário e da devida declaração às autoridades fiscais competentes.\n* O portal disponibiliza a opção de baixar os bancos de dados brutos consolidados (em formato CSV) para ingestão local e análise aprofundada em sistemas relacionais ou softwares de grafo como Neo4j.\n* Os relatórios e visualizações de rede são excelentes para compor dossiês investigativos de inteligência patrimonial e subsidiar pedidos formais de cooperação jurídica internacional."
   },
   {
     "id": "Identificator.space",
@@ -3435,6 +4088,41 @@ const TOOLS = [
     "notes": "* A localização geográfica exibida na plataforma é baseada na geolocalização do endereço IP da câmera (fornecida por bancos de dados MaxMind ou similares), o que significa que as coordenadas indicam o nó da rede ou a cidade geral, e não a posição exata de latitude e longitude do equipamento físico.\n* A ferramenta atua de forma estritamente passiva sob a perspectiva do investigador, visto que os fluxos de vídeo já estão sendo coletados e retransmitidos pelos servidores próprios do Insecam, evitando que o endereço IP do analista toque diretamente o dispositivo alvo."
   },
   {
+    "id": "Insta Stories Viewer",
+    "title": "Insta Stories Viewer",
+    "url": "https://insta-stories-viewer.com/en/",
+    "tipo": "Visualizador Anônimo e Espelho de Rede Social (Instagram Viewer / SOCMINT)",
+    "utilidade": "Visualização anônima, monitoramento passivo e download de publicações, Stories, Reels e Destaques públicos do Instagram",
+    "descricao": "O Insta Stories Viewer é um serviço web projetado para visualizar e baixar anonimamente conteúdos de contas públicas do Instagram (Stories, publicações do feed, Reels, fotos de perfil em alta resolução e destaques). A plataforma atua como uma interface intermediária (proxy/espelho), permitindo acessar e capturar mídias de perfis sem a necessidade de realizar login na rede social ou deixar registros de visualização (*views*) nas publicações temporárias dos alvos.",
+    "testada": false,
+    "tags": [
+      "alvo/usuario-email",
+      "fonte/redes-sociais",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas e inteligência em mídias sociais (SOCMINT), a ferramenta desempenha papel essencial na coleta passiva e na preservação de evidências digitais. Ela permite que analistas monitorem a atividade recente de contas públicas de interesse, baixem Stories antes de sua expiração natural (janela de 24 horas) e extraiam dados visuais sem interagir diretamente com a infraestrutura da rede ou alertar o alvo sobre a investigação em curso.",
+    "notes": "* A ferramenta é restrita a contas com status de privacidade público, não sendo capaz de recuperar Stories ou publicações de perfis trancados/privados.\n* Útil para a rotina de coleta e preservação de mídias temporárias (Stories), viabilizando o download em formato original (.mp4/.jpg) para posterior análise de metadados ou arquivamento de custódia forense."
+  },
+  {
+    "id": "Instant Data Scraper",
+    "title": "Instant Data Scraper",
+    "url": "https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah",
+    "tipo": "Extensão de Navegador / Ferramenta de Web Scraping",
+    "utilidade": "Extração automatizada e estruturação de dados tabulares em páginas web diretamente pelo navegador",
+    "descricao": "O Instant Data Scraper é uma extensão de navegador (disponível para navegadores baseados em Chromium) projetada para facilitar a raspagem de dados (*web scraping*) sem a necessidade de criação prévia de scripts ou código. A ferramenta utiliza algoritmos heurísticos para detectar automaticamente elementos tabulares ou listas de dados estruturados na página carregada, permitindo a navegação assistida por paginação ou rolagem contínua (*infinite scroll*) e a exportação direta dos dados em formatos estruturados como CSV e XLSX.",
+    "testada": false,
+    "tags": [
+      "func/scrapers-automacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações em fontes abertas, o Instant Data Scraper agiliza a fase de coleta massiva de dados semiestruturados expostos na camada web superficial. A extensão permite ao analista extrair de forma rápida grandes volumes de postagens, comentários, membros de grupos, listas de seguidores/seguidos em redes sociais, catálogos de e-commerce e listagens em diretórios online ou motores de busca, acelerando a triagem de alvos e reduzindo o esforço manual de consolidação de evidências.",
+    "notes": "* Altamente eficaz para a extração de dados em portais que usam carregamento dinâmico e rolagem infinita, permitindo ao investigador configurar o atraso de requisição (*delay*) para evitar bloqueios ou inconsistências no carregamento dos elementos.\n* A extração ocorre localmente no ambiente do cliente (*Client-Side*), processando o DOM que já foi renderizado pelo navegador, o que preserva a OPSEC ao não direcionar requisições para servidores externos de processamento de terceiros."
+  },
+  {
     "id": "InstantUsername",
     "title": "InstantUsername",
     "url": "https://instantusername.com/",
@@ -3488,6 +4176,25 @@ const TOOLS = [
     "notes": "* Como a plataforma atua gerando links para sites de terceiros, a eficácia de cada consulta está diretamente vinculada à persistência de acesso e às mudanças de API nas plataformas finais.\n* É fundamental que o investigador utilize esses recursos a partir de uma infraestrutura segura (como VPNs ou redes de anonimato), evitando expor o seu endereço IP real ao acessar os links gerados."
   },
   {
+    "id": "IP Location Finder",
+    "title": "IP Location Finder",
+    "url": "https://www.iplocation.net/",
+    "tipo": "Agregador de Geolocalização IP e Ferramentas de Rede",
+    "utilidade": "Geolocalização de endereços IP, inteligência de rede, agregação de bases de dados geográficas e auditoria de parâmetros de conexão",
+    "descricao": "O IPLocation.net é um portal e agregador de inteligência de rede que centraliza múltiplos motores e bases de dados de geolocalização IP (como IP2Location, MaxMind, IPinfo, DB-IP, entre outros). A plataforma permite consultar endereços IPv4, IPv6 e nomes de domínio, correlacionando resultados para extrair localização geográfica aproximada (país, região, cidade, coordenadas estimadas), Provedor de Serviços de Internet (ISP), Sistema Autônomo (ASN), além de oferecer utilitários complementares de rede como WHOIS, DNS lookup, cálculo de CIDR e testes de velocidade/portas.",
+    "testada": false,
+    "tags": [
+      "alvo/ip",
+      "alvo/dominio",
+      "func/busca-identificacao",
+      "func/infraestrutura-cybint",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações digitais e inteligência de fontes abertas (OSINT/CYBINT), a ferramenta atua como um hub central para triagem e validação cruzada de indicadores técnicos de infraestrutura. Por consultar múltiplas bases de dados de geolocalização simultaneamente, permite ao investigador comparar divergências entre provedores de dados geográficos, identificar o bloco de rede/ASN responsável por um tráfego suspeito e mapear as propriedades associadas a servidores e domínios de forma passiva.",
+    "notes": "* As coordenadas geográficas fornecidas representam estimativas baseadas no cadastro do provedor (nível de cidade ou nó regional de telecomunicação) e não correspondem à posição física em tempo real via GPS de um dispositivo individual.\n* As buscas realizadas na interface web consultam bancos de dados indexados por terceiros, garantindo que o alvo investigado não receba tráfego direto decorrente da pesquisa.\n* A comparação lado a lado de diferentes fornecedores de dados é especialmente útil para identificar inconsistências cadastrais ou verificar se determinado bloco IP foi recentemente reatribuído a outra região ou operadora."
+  },
+  {
     "id": "ip-api",
     "title": "ip-api",
     "url": "https://ip-api.com/",
@@ -3503,6 +4210,25 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No âmbito da inteligência cibernética (CYBINT) e da investigação de infraestrutura digital, a ferramenta atua como um recurso fundamental para o enriquecimento de indicadores de comprometimento (IoCs). Ela permite ao analista identificar de forma rápida a propriedade institucional de um endereço IP, mapear redes de servidores vinculadas a campanhas de fraude ou ataques, discernir se um tráfego provém de um provedor de internet residencial ou de um data center comercial, além de contextualizar a origem geográfica aproximada de conexões suspeitas.",
     "notes": "* **Natureza da Geolocalização**: É crítico que o investigador compreenda que a geolocalização baseada em IP fornecida pela plataforma é de caráter cadastral e estimativo. Ela reflete o local de registro ou ponto de agregação do provedor (frequentemente a nível de cidade), não devendo ser confundida com a localização exata baseada em GPS de um dispositivo físico.\n* **Gerenciamento de Taxa (Rate Limit)**: Ao automatizar coletas massivas em scripts locais utilizando o endpoint gratuito da API, deve-se implementar atrasos (*throttling*) para não ultrapassar 45 requisições por minuto. Caso o limite seja excedido, o IP da máquina de investigação receberá um bloqueio temporário (erro HTTP 429).\n* **Camada de Anonimização**: Consultar um IP na plataforma não alerta o proprietário do IP alvo, pois a busca é feita de forma passiva contra os bancos de dados do ip-api. Contudo, as requisições de consulta expõem o IP do próprio investigador ao servidor do ip-api, tornando recomendável o uso de VPN ou proxies durante a execução das buscas."
+  },
+  {
+    "id": "IP2Location",
+    "title": "IP2Location",
+    "url": "https://www.ip2location.com/",
+    "tipo": "Plataforma de Geolocalização por IP e Inteligência de Infraestrutura",
+    "utilidade": "Geolocalização de endereços IP, inteligência de infraestrutura de rede e detecção de proxies/VPNs",
+    "descricao": "O IP2Location é uma plataforma comercial e de inteligência cibernética projetada para consultar, correlacionar e fornecer dados contextuais detalhados a partir de endereços IPv4 e IPv6 e nomes de domínio. A ferramenta mapeia a geolocalização cadastral (país, região, cidade e coordenadas estimadas), Provedor de Serviços de Internet (ISP), Sistema Autônomo (ASN), velocidade de conexão, tipo de uso da rede, fuso horário e indicadores técnicos sobre o uso de proxies, VPNs, redes TOR e servidores de data centers.",
+    "testada": false,
+    "tags": [
+      "alvo/ip",
+      "alvo/dominio",
+      "func/busca-identificacao",
+      "func/infraestrutura-cybint",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No ecossistema de inteligência cibernética (CYBINT) e investigações digitais, a ferramenta serve como um componente essencial para enriquecimento e validação de indicadores técnicos de rede. Ela permite correlacionar conexões suspeitas a localizações geográficas aproximadas, identificar se o tráfego de um alvo provém de uma conexão residencial ou de infraestrutura em nuvem/proxy, e mapear os blocos de IP e ASNs sob controle de uma organização.",
+    "notes": "* A geolocalização fornecida baseia-se em tabelas cadastrais e roteamento de operadoras (frequentemente a nível de cidade ou nó de distribuição regional), não devendo ser confundida com coordenadas GPS precisas de dispositivos físicos.\n* As buscas realizadas na plataforma web consultam as bases de dados mantidas pela própria IP2Location, permitindo a investigação passiva sem envio de tráfego direto ao IP investigado.\n* Para análises em lote ou integração com scripts investigativos, é necessário o uso de chaves de API respeitando os limites da camada gratuita ou o download das tabelas da versão LITE."
   },
   {
     "id": "Jimpl",
@@ -3591,6 +4317,43 @@ const TOOLS = [
     "notes": "* É altamente recomendável combinar o uso da senha mestra com um arquivo de chave (*key file*) armazenado em um dispositivo físico separado (como um pendrive) para adicionar uma camada extra de segurança ao banco de dados `."
   },
   {
+    "id": "KeyCDN IP Location Finder",
+    "title": "KeyCDN IP Location Finder",
+    "url": "https://tools.keycdn.com/geo",
+    "tipo": "Ferramenta Web de Geolocalização IP e Análise de Infraestrutura",
+    "utilidade": "Geolocalização de endereços IP e domínios, mapeamento de infraestrutura e consulta de Provedor (ISP) e Sistema Autônomo (ASN)",
+    "descricao": "O KeyCDN IP Location Finder é uma ferramenta web disponibilizada pela rede de distribuição de conteúdo KeyCDN para realizar consultas e análises contextuais de endereços IPv4, IPv6 e nomes de host/domínio. A aplicação processa a entrada fornecida e retorna dados detalhados de geolocalização cadastral aproximada (país, código ISO, região, cidade, código postal e coordenadas estimadas de latitude e longitude), além de metadados técnicos de infraestrutura de rede, tais como Provedor de Serviços de Internet (ISP), Sistema Autônomo (ASN) e fuso horário.",
+    "testada": false,
+    "tags": [
+      "alvo/ip",
+      "alvo/dominio",
+      "func/busca-identificacao",
+      "func/infraestrutura-cybint",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações cibernéticas (CYBINT) e inteligência de fontes abertas, a ferramenta atua como um recurso ágil na fase de reconhecimento passivo e enriquecimento de indicadores técnicos. Ela viabiliza a determinação da origem geográfica cadastral de conexões suspeitas, auxilia na verificação de servidores de hospedagem vinculados a domínios de interesse e permite auditar se determinado tráfego parte de data centers corporativos ou de faixas de IP residenciais.",
+    "notes": "* Os dados de coordenadas geográficas baseiam-se em registros cadastrais e tabelas de roteamento de telecomunicações (nível de cidade ou ponto de presença de rede), não devendo ser interpretados como rastreamento GPS físico em tempo real.\n* As buscas realizadas na plataforma consultam a base de dados mantida pela KeyCDN, realizando a investigação de forma passiva sem enviar tráfego direto ou interagir ativamente com o servidor/dispositivo do endereço investigado.\n* É recomendável cruzar as informações obtidas com outras bases de geolocalização IP para atestar a consistência dos dados cadastrais do ASN e do ISP."
+  },
+  {
+    "id": "Lenso.ai",
+    "title": "Lenso.ai",
+    "url": "https://lenso.ai/en",
+    "tipo": "Motor de Busca Reversa de Imagens e Reconhecimento Facial / IMINT",
+    "utilidade": "Busca reversa visual com inteligência artificial para reconhecimento facial, detecção de duplicatas, locais e objetos",
+    "descricao": "O Lenso.ai é um motor de busca reversa visual impulsionado por inteligência artificial e visão computacional. A plataforma permite o envio de fotografias ou links para rastrear correspondências na internet por meio de filtros específicos de categorização, incluindo reconhecimento e correspondência facial (People), identificação de lugares e marcos arquitetônicos (Places), detecção de objetos/produtos (Objects) e busca de duplicatas idênticas ou similares (Duplicates).",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, especialmente em Inteligência de Imagens (IMINT) e verificação de identidades, o Lenso.ai atua como um vetor avançado de busca e correlação de pessoas e cenários. A ferramenta possibilita rastrear a pegada visual de um alvo humano através do reconhecimento facial em múltiplas fontes públicas da web, identificar se uma foto de perfil é autêntica ou reaproveitada de outros contextos e localizar o ponto geográfico de imagens por meio da correspondência de elementos arquitetônicos e paisagísticos.",
+    "notes": "* A categorização por abas (Pessoas, Lugares, Objetos e Duplicatas) permite isolar a intenção da busca, reduzindo ruídos e falsos positivos na investigação.\n* Por se tratar de um serviço baseado em nuvem de terceiros, o envio de fotografias confidenciais ou sensíveis de operações deve ser avaliado sob a ótica de OPSEC e custódia da informação."
+  },
+  {
     "id": "Lupa Veicular",
     "title": "Lupa Veicular",
     "url": "https://www.lupaveicular.com/",
@@ -3608,6 +4371,22 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações patrimoniais, auditorias corporativas e análise de movimentações logísticas (VATINT), a ferramenta atua como um indexador técnico de dados veiculares. Ela viabiliza o rastreio da procedência de ativos, identificação de restrições judiciais ou gravames (como alienação fiduciária), verificação de passagens por leilões ou ocorrências de sinistros, e diferenciação do perfil de propriedade (se o bem pertence a uma pessoa física ou jurídica), otimizando a fase de cruzamento e expansão de vínculos.",
     "notes": "* A plataforma exibe uma verificação visual instantânea dos dados básicos de fábrica assim que a placa é digitada, permitindo que o analista certifique a exatidão do alvo e evite custos desnecessários antes de solicitar o relatório completo.\n* Identificar no laudo prévio que o proprietário se enquadra como banco ou seguradora constitui um forte indicador técnico de alienação fiduciária ou de um sinistro anterior de grande monta que pode ainda não estar totalmente detalhado em indexadores públicos."
+  },
+  {
+    "id": "Magnific Icons",
+    "title": "Magnific Icons",
+    "url": "https://www.magnific.com/icons",
+    "tipo": "Catálogo / Banco de Recursos Gráficos e Vetoriais",
+    "utilidade": "Repositório e banco de recursos visuais vetoriais para elaboração de relatórios, mapeamento de grafos e apoio à criação de personas (OPSEC)",
+    "descricao": "O Magnific Icons (seção da plataforma Magnific, anteriormente vinculada ao ecossistema Freepik/Iconfinder) é um catálogo online massivo de recursos visuais que reúne milhões de ícones e pictogramas nos formatos vetoriais e rasterizados (PNG e SVG). A plataforma dispõe de mecanismos de busca por estilo, filtros por categorias temáticas e ferramentas de customização gráfica para desenvolvimento de interfaces, apresentações e fluxogramas analíticos.",
+    "testada": false,
+    "tags": [
+      "plataforma/web",
+      "acesso/limitado",
+      "opsec/personas"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas e segurança operacional, o repositório atua como recurso auxiliar em duas frentes fundamentais: na padronização visual de relatórios de inteligência/diagramas de vínculos e na composição de identidades sintéticas (*sock puppets* / OPSEC). A ferramenta permite extrair e customizar elementos visuais específicos para ilustrar nós em árvores de evidências e grafos relacionais, bem como criar interfaces, logotipos falsos e identidades visuais de cobertura verossímeis utilizadas para operacionalizar perfis de infiltração formal ou engajamento em ambientes monitorados.",
+    "notes": "* Os vetores em formato SVG podem ser importados diretamente em softwares de análise de grafos e diagramação (como Obsidian Canvas, Maltego, draw.io ou XMind) para personalizar ícones de entidades (ex: bancos, órgãos públicos, tipos de servidores, veículos).\n* Na criação de personas institucionais (*sock puppets* corporativos), a busca por coleções de estilo uniforme permite criar páginas de apresentação e materiais gráficos coesos para reforçar a credibilidade do disfarce operacional."
   },
   {
     "id": "Mailbox.org",
@@ -3683,6 +4462,22 @@ const TOOLS = [
     "notes": "* A ferramenta é de extrema utilidade para investigações em áreas rurais ou imóveis sem endereço urbano convencional, permitindo a inserção de coordenadas geográficas exatas para delimitar a comarca responsável.\n* Funciona de maneira complementar ao portal unificado dos Registradores, servindo como a etapa prévia de inteligência geográfica antes do investimento financeiro na emissão de certidões pagas."
   },
   {
+    "id": "Mapillary",
+    "title": "Mapillary",
+    "url": "https://www.mapillary.com/app/",
+    "tipo": "Plataforma Web de Imagens de Nível de Solo e Inteligência Geoespacial (GEOINT / IMINT)",
+    "utilidade": "Exploração, verificação e inteligência visual de imagens de nível de solo em escala global alimentadas por colaboração e visão computacional",
+    "descricao": "O Mapillary é uma plataforma global de mapeamento visual e imagens de nível de solo (*street-level imagery*) desenvolvida de forma colaborativa e aprimorada por algoritmos de visão computacional. O serviço agrega e indexa milhões de sequências fotográficas e panorâmicas em 360 graus enviadas por usuários, conectando-as a coordenadas geográficas precisas e aplicando detecção automatizada de placas, faixas, objetos urbanos e pontos de interesse cartográfico.",
+    "testada": false,
+    "tags": [
+      "fonte/geoespacial",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No ecossistema de inteligência geoespacial (GEOINT) e verificação visual (IMINT), o Mapillary atua como uma alternativa e complemento de fonte aberta a ferramentas proprietárias de visualização de ruas. A ferramenta é essencial para a corroboração de locais, análise temporal de mudanças na infraestrutura urbana, reconhecimento visual de rotas de deslocamento e verificação de fachadas ou sinalizações em regiões geográficas que não dispõem de cobertura atualizada por serviços tradicionais de satélite ou mapeamento comercial.",
+    "notes": "* A plataforma oferece suporte a histórico temporal, permitindo alternar entre diferentes capturas de uma mesma rua ao longo dos anos para verificar reformas, mudanças de comércio ou reconstrução de cenários em datas específicas.\n* Por contar com detecção automática de feições urbanas por inteligência artificial, o sistema destaca nós como placas de sinalização viária, postes e faixas de pedestres, facilitando o cruzamento de referências cartográficas com bases do OpenStreetMap."
+  },
+  {
     "id": "MarineTraffic",
     "title": "MarineTraffic",
     "url": "https://www.marinetraffic.com/",
@@ -3732,6 +4527,43 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No ciclo de inteligência e na organização do conhecimento pessoal, a ferramenta é utilizada na fase de análise de dados e confecção de relatórios. Ela permite estruturar visualmente o fluxo de uma investigação, mapear a linha do tempo de eventos cibernéticos, esquematizar redes de relacionamentos e ilustrar o processo de *pivoting*. Devido à sua compatibilidade nativa com o Obsidian, que renderiza blocos de código Mermaid localmente, o editor serve como um ambiente de prototipagem rápida para o analista estruturar grafos complexos antes de incorporá-los definitivamente às suas notas integradas.",
     "notes": "* Por se tratar de uma plataforma que não realiza busca ativa de dados na rede e focar apenas no processamento do que é inserido pelo usuário, o analista deve atentar-se à OPSEC de dados ao utilizar a versão web pública. Se houver informações estritamente confidenciais (como nomes reais de alvos, CPFs ou IPs sob sigilo), recomenda-se não utilizar o ambiente online para evitar a exposição acidental de dados sensíveis na nuvem, priorizando a escrita e renderização do código Mermaid de forma local e isolada dentro do próprio Obsidian.\n* O editor disponibiliza recursos de exportação nos formatos PNG, SVG e cópia de código em formato Data URL, otimizando a transição dos diagramas diretamente para os relatórios formais de inteligência."
+  },
+  {
+    "id": "MetaGer",
+    "title": "MetaGer",
+    "url": "https://metager.org/",
+    "tipo": "Metabuscador Web Privativo e Proxy de Anonimização",
+    "utilidade": "Mecanismo de metabusca privativo e de código aberto para pesquisas web anônimas com recurso de navegação via proxy integrado",
+    "descricao": "O MetaGer é um mecanismo de metabusca de código aberto operado pela associação alemã sem fins lucrativos SUMA-EV em cooperação com a Universidade de Hannover. O serviço agrega e compila resultados de múltiplos motores de busca independentes e índices web, entregando respostas sem rastrear as consultas dos usuários, sem armazenar endereços IP e sem repassar dados telemétricos a corretores de dados. Além disso, disponibiliza a funcionalidade nativa \"Abrir anonimamente\" (*Open Anonymously*), que atua como um servidor proxy intermediário para acessar os links resultantes sem expor a identidade do pesquisador ao servidor de destino.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência de fontes abertas, o MetaGer é empregado na fase inicial de reconhecimento passivo e coleta de superfície. Por realizar consultas federadas e despersonalizadas, a ferramenta permite contornar a \"bolha de filtros\" (*filter bubble*) e obter resultados neutros em escala internacional. Sua infraestrutura fortalece substancialmente a segurança operacional (OPSEC) do analista, viabilizando tanto a pesquisa de termos sensíveis sem indexação do perfil investigativo quanto a abertura de sites desconhecidos ou potencialmente hostis sem revelar a infraestrutura de rede e o endereço IP real do investigador.",
+    "notes": "* A funcionalidade \"Abrir anonimamente\" presente ao lado de cada link nos resultados é ideal para inspecionar páginas suspeitas ou alvos de investigação em uma camada preliminar, impedindo que o servidor de destino capture o cabeçalho HTTP real ou o IP do investigador.\n* O motor permite refinar pesquisas selecionando idiomas, focando em fontes de domínios específicos e ativando filtros de busca estrita de termos entre aspas."
+  },
+  {
+    "id": "Miami-Dade County Property Appraiser - Property Search",
+    "title": "Miami-Dade County Property Appraiser - Property Search",
+    "url": "https://apps.miamidadepa.gov/PropertySearch/#/",
+    "tipo": "Portal Governamental de Registros Públicos Imobiliários e Sistema de Informações Geográficas (GIS)",
+    "utilidade": "Consulta cadastral, avaliação fiscal, histórico de transações imobiliárias e mapeamento geoespacial de propriedades no Condado de Miami-Dade (Flórida/EUA)",
+    "descricao": "O Property Search do Miami-Dade County Property Appraiser é o portal oficial de consulta imobiliária e cadastral do Condado de Miami-Dade, na Flórida (EUA). A plataforma indexa e disponibiliza dados públicos de todas as parcelas imobiliárias da região metropolitana de Miami, permitindo buscas por endereço, nome do proprietário, número de fólio (*Parcel ID*) ou subdivisão. O sistema consolida dados cadastrais detalhados, incluindo nome do titular, endereço de correspondência (*mailing address*), descrição legal do lote, histórico cronológico de escrituras e vendas (*sales history*), valor venal/avaliação fiscal de mercado (*assessed & market value*), especificações construtivas e zoneamento urbano, integrando camadas cartográficas de sensoriamento remoto e fotos aéreas anuais.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/empresa",
+      "fonte/registros-publicos-gov",
+      "fonte/geoespacial",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações patrimoniais transnacionais, combate à lavagem de dinheiro (AML), Due Diligence e rastreamento de ativos internacionais, o portal é uma das ferramentas primárias mais eficazes para localizar bens imóveis detidos por pessoas físicas e jurídicas no sul da Flórida. Ele possibilita realizar *pivoting* a partir do nome de um investigado ou de empresas offshore/LLCs para revelar aquisições imobiliárias, cruzar endereços de correspondência declarados com outras estruturas societárias nos Estados Unidos e verificar valores declarados em transações imobiliárias históricas.",
+    "notes": "* Ao realizar pesquisas por nome de pessoas físicas, recomenda-se testar a estrutura `Sobrenome Nome` ou buscar apenas pelo sobrenome principal para cobrir possíveis divergências na padronização dos registros cartorários americanos.\n* O número de fólio (*Folio Number*) é o identificador único e invariável da propriedade, sendo a forma mais precisa de indexação e busca no sistema.\n* O relatório do imóvel frequentemente traz links e números de livro/página (*Book/Page* ou *Document Number*) que remetem diretamente às escrituras registradas no *Miami-Dade County Clerk of Courts*, possibilitando a emissão da íntegra dos contratos de compra e venda e das hipotecas associadas."
   },
   {
     "id": "MindMeister",
@@ -3869,6 +4701,40 @@ const TOOLS = [
     ],
     "utilidade_Osint": "Atua na fase de verificação de mídias e forense digital (IMINT). A plataforma permite realizar a engenharia reversa e a extração de payloads e mensagens ocultas dentro de arquivos de imagem obtidos em fontes abertas, auxiliando no desmascaramento de canais de comunicação dissimulados e na detecção de técnicas de esteganografia.",
     "notes": "* Ideal para decodificar pistas e arquivos ocultos em competições de CTF (Capture The Flag) ou auditorias rápidas de imagens suspeitas coletadas em fontes abertas.\n* Para preservar a OPSEC técnica, deve-se avaliar o nível de sensibilidade do artefato antes de enviá-lo para processamento em plataformas baseadas na web, priorizando ferramentas locais caso o arquivo contenha dados sigilosos ou protegidos."
+  },
+  {
+    "id": "Mojeek",
+    "title": "Mojeek",
+    "url": "https://www.mojeek.com/",
+    "tipo": "Motor de Busca Web Independente e Indexador Próprio",
+    "utilidade": "Mecanismo de busca e indexador web independente para consultas de superfície neutras e sem rastreamento de usuários",
+    "descricao": "O Mojeek é um mecanismo de busca na web com sede no Reino Unido que se destaca por construir seu próprio índice de páginas a partir de um rastreador autônomo (*web crawler*), sem depender de dados ou APIs de outros motores como Google ou Microsoft Bing. A plataforma é orientada à privacidade estrita, operando com uma política rigorosa de não rastreamento que assegura a não coleta de endereços IP, histórico de pesquisa ou perfis comportamentais de seus usuários.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "func/busca-dorks",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No fluxo de investigações em fontes abertas, o Mojeek é uma fonte alternativa de busca primária e reconhecimento de superfície. Devido ao seu índice próprio e independente, ele apresenta resultados e ordenações diferentes dos motores comerciais hegemônicos, possibilitando a descoberta de páginas, documentos esquecidos e ativos digitais que sofrem despriorização em outros buscadores. Além disso, fornece uma camada de proteção à segurança operacional (OPSEC) ao impedir o vínculo de termos investigativos sensíveis ao perfil ou IP do analista.",
+    "notes": "* Por possuir um índice próprio em constante expansão, os resultados podem apresentar menor densidade em tópicos altamente regionalizados ou recentes em relação a indexadores de escala massiva comercial, sendo idealmente utilizado de forma complementar.\n* Oferece filtros avançados por tipo de emoção/tom do texto (*search by emotion*) e busca focada em websites independentes, o que pode auxiliar no rastreamento de discussões de nicho e fóruns de pequeno porte."
+  },
+  {
+    "id": "Morbotron",
+    "title": "Morbotron",
+    "url": "https://morbotron.com/",
+    "tipo": "Motor de Busca de Mídia / Acervo Digital de Transcrições e Imagens",
+    "utilidade": "Indexação, transcrição e busca de fotogramas (frames) e citações de episódios e filmes da animação Futurama",
+    "descricao": "O Morbotron é uma plataforma de busca e indexação visual desenvolvida pelos mesmos criadores do Frinkiac, voltada para o mapeamento de legendas, transcrições de diálogos e fotogramas (*screencaps*) de todas as temporadas e filmes da série de animação *Futurama*. O motor sincroniza as linhas de roteiro com os respectivos frames de vídeo, permitindo a localização exata de cenas por meio de termos textuais e a geração de capturas estáticas ou GIFs personalizados com legendas embutidas.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações baseadas em fontes abertas, especialmente na verificação de desinformação e análise de mídias (IMINT), o Morbotron funciona como repositório de referência para autenticação de mídias de cultura pop. Ele permite rastrear a proveniência exata de citações, memes e capturas de tela amplamente disseminados em redes sociais ou fóruns de discussão, possibilitando aos investigadores validar se uma frase ou imagem atribuída a determinado contexto é autêntica, alterada ou descontextualizada.",
+    "notes": "* Útil para checagem de fatos (*fact-checking*) na identificação de legendas falsificadas inseridas sobre cenas da animação.\n* A plataforma fornece referências precisas de temporada e episódio (*Season/Episode code*), facilitando o cruzamento com bases de dados cinematográficas e registros históricos de transmissão."
   },
   {
     "id": "Mullvad VPN",
@@ -4009,6 +4875,22 @@ const TOOLS = [
     "notes": "* Excelente para conduzir investigações passivas, permitindo analisar a infraestrutura técnica de um alvo sem gerar tráfego direto contra os servidores dele, mitigando o risco de detecção por contra-inteligência.\n* A plataforma dispõe de uma sintaxe de busca avançada baseada em campos técnicos específicos (como objetos de certificados ou strings em respostas HTTP), ideal para rastrear servidores de comando e controle (C2) ou identificar tecnologias específicas adotadas por uma empresa."
   },
   {
+    "id": "NewOCR",
+    "title": "NewOCR",
+    "url": "https://www.newocr.com/",
+    "tipo": "Serviço Online de Reconhecimento Óptico de Caracteres (OCR)",
+    "utilidade": "Extração automatizada de texto e caracteres (OCR) a partir de imagens digitalizadas, fotos e documentos estáticos",
+    "descricao": "O NewOCR é um serviço online gratuito de Reconhecimento Óptico de Caracteres (*Optical Character Recognition* - OCR) baseado no motor Tesseract OCR. A plataforma permite carregar arquivos de imagem em múltiplos formatos (JPEG, PNG, GIF, BMP, TIFF) e documentos (PDF, DjVu), processando e convertendo elementos visuais textuais em arquivos de texto editáveis (TXT, DOC, PDF), com suporte a mais de 120 idiomas e ferramentas de seleção de área e rotação de imagem.",
+    "testada": false,
+    "tags": [
+      "func/forense-local",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de inteligência de fontes abertas, o NewOCR é empregado na fase de análise e processamento de evidências brutas previamente coletadas. O analista pode utilizá-lo para extrair dados estruturados ou semiestruturados — tais como nomes, CPFs, números de processos, placas de veículos, registros corporativos ou metadados textuais — contidos em capturas de tela, documentos digitalizados, relatórios em formato PDF e imagens de mídias sociais, viabilizando buscas posteriores por palavras-chave e operações de cruzamento de dados.",
+    "notes": "* A ferramenta permite selecionar uma região específica da imagem (*crop tool*) antes do processamento, o que otimiza a precisão do OCR ao isolar apenas o bloco de texto relevante (ex: um cabeçalho ou tabela) e descartar ruídos de fundo.\n* Por operar em infraestrutura web de terceiros, o envio de documentos confidenciais ou imagens com dados pessoais sensíveis deve ser avaliado sob a ótica de OPSEC e custódia da informação."
+  },
+  {
     "id": "NirSoft",
     "title": "NirSoft",
     "url": "https://www.nirsoft.net/",
@@ -4075,6 +4957,44 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo do Cyber Intelligence (CYBINT) e da investigação de ativos digitais, o nslookup.io permite mapear a infraestrutura técnica de rede associada a um alvo ou organização. Por meio das consultas automatizadas de registros MX, é possível identificar os servidores de e-mail utilizados (revelando se usam soluções como Google Workspace ou Microsoft 365); através de registros TXT, é possível descobrir strings de verificação que vinculam o domínio a outras propriedades web; e a partir dos registros A/AAAA, mapeiam-se os endereços IP para posterior rastreamento de ASN e provedores de hospedagem.",
     "notes": "* A ferramenta oferece um recurso útil para investigações que é a possibilidade de escolher qual servidor de DNS público (Google, Cloudflare, OpenDNS) responderá à consulta, ajudando a identificar propagações de DNS específicas ou respostas regionalizadas.\n* Por realizar as requisições a partir de seus próprios servidores na nuvem, o nslookup.io impede que o endereço IP real do analista seja registrado nos logs dos servidores de nomes autoritativos do domínio sob investigação no momento da pesquisa."
+  },
+  {
+    "id": "NumLookup Reverse Image Search",
+    "title": "NumLookup Reverse Image Search",
+    "url": "https://www.numlookup.com/reverse-image-search?utm_source=chatgpt.com",
+    "tipo": "Motor de Busca Reversa de Imagens / IMINT",
+    "utilidade": "Busca reversa de imagens, reconhecimento visual e identificação de pessoas ou objetos na web",
+    "descricao": "O NumLookup Reverse Image Search é uma ferramenta online de busca reversa de imagens e inteligência visual (IMINT). Utilizando visão computacional e algoritmos de aprendizado profundo (*deep learning*), a plataforma analisa padrões visuais, faces, formas e texturas em arquivos enviados ou URLs, comparando-os com uma base massiva de bilhões de imagens indexadas na internet para encontrar correspondências idênticas, versões modificadas ou conteúdos contextualmente correlacionados.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, a ferramenta desempenha papel essencial na verificação da autenticidade e proveniência de mídias digitais. Ela possibilita identificar a primeira ocorrência pública de uma imagem, desarticular perfis falsos (*sock puppets* ou golpes de *catfishing*), rastrear a presença visual de alvos humanos em múltiplos serviços web e validar o contexto real de fotografias submetidas a análises de verificação de fatos.",
+    "notes": "* Os algoritmos são capazes de reconhecer imagens mesmo após operações de redimensionamento, recorte ou alterações leves de saturação e contraste.\n* Recomendado como vetor de busca complementar a outros motores de indexação visual (como Google Lens, Yandex Visual Search e Bing Visual Search) para mitigar eventuais pontos cegos na coleta de dados."
+  },
+  {
+    "id": "Nuwber",
+    "title": "Nuwber",
+    "url": "https://www.nuwber.com/",
+    "tipo": "Motor de Busca de Pessoas / Agregador de Registros Públicos",
+    "utilidade": "Consulta de registros públicos, dados biográficos e contato de indivíduos nos Estados Unidos (People Search)",
+    "descricao": "O Nuwber é um serviço de busca de pessoas (*people search engine*) focado primordialmente em residentes nos Estados Unidos. A plataforma agrega, correlaciona e indexa dados de múltiplas fontes públicas e registros governamentais, permitindo consultas a partir do nome completo, número de telefone, endereço físico ou e-mail de um indivíduo para consolidar perfis com histórico de endereços, parentes, associados conhecidos e detalhes de contato.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/telefone",
+      "alvo/usuario-email",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações em fontes abertas e diligências de *profiling*, o Nuwber atua como um poderoso motor de *pivoting* e validação de identidade civil. Ele acelera a correlação de um identificador inicial (como um número de telefone ou nome comum) com endereços físicos, faixa etária, registros de propriedades e possíveis vínculos familiares de um alvo, fornecendo novos vetores de aprofundamento investigativo.",
+    "notes": "* A base de dados é estritamente voltada a indivíduos com histórico de residência ou registros civis nos Estados Unidos.\n* Extremamente eficiente na identificação de \"Parentes Conhecidos\" (*Possible Relatives*) e \"Associados\", o que auxilia no mapeamento de redes relacionais e no contorno de alvos com nomes muito comuns (*homônimos*)."
   },
   {
     "id": "OffSec Tools - OSINT Tag",
@@ -4179,6 +5099,23 @@ const TOOLS = [
     "notes": "* Ideal para a fase de análise do ciclo de inteligência, permitindo documentar o organograma de grupos investigados, fluxos financeiros e vínculos societários complexos de maneira intuitiva.\n* Por se tratar de uma plataforma web de terceiros, o analista deve ter cautela com a OPSEC e a confidencialidade dos dados inseridos, evitando incluir dados estritamente sensíveis ou identificáveis em projetos configurados como públicos."
   },
   {
+    "id": "Open-i",
+    "title": "Open-i",
+    "url": "https://openi.nlm.nih.gov/",
+    "tipo": "Motor de Busca e Repositório de Mídia Científica / Acervo Digital",
+    "utilidade": "Pesquisa, recuperação e análise de imagens biomédicas, radiografias e ilustrações científicas indexadas em artigos acadêmicos abertos",
+    "descricao": "O Open-i é um serviço de busca e recuperação de imagens biomédicas desenvolvido pela National Library of Medicine (NLM), vinculada ao National Institutes of Health (NIH) dos Estados Unidos. A ferramenta provê acesso indexado a milhões de imagens, ilustrações clínicas, fotografias médicas, gráficos e radiografias provenientes de artigos científicos de acesso aberto do PubMed Central (PMC), associando cada imagem ao seu resumo e contexto textual original.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações baseadas em fontes abertas, o Open-i serve como uma fonte qualificada para verificação de mídias científicas, checagem de fatos (*fact-checking*) e inteligência médica/biológica. A plataforma permite localizar a proveniência original de ilustrações e radiografias frequentemente reaproveitadas em campanhas de desinformação médica, alegações fraudulentas sobre tratamentos ou publicações descontextualizadas em redes sociais, possibilitando rastrear os autores, a data de publicação e o periódico científico primário.",
+    "notes": "* A busca estruturada permite filtrar por tipo de imagem (fotografias clínicas, raios-X, tomografias, gráficos) e por termos MeSH (Medical Subject Headings), aumentando a precisão da pesquisa.\n* Todas as mídias recuperadas trazem o vínculo direto com a identificação do PMC/PubMed (PMID/PMCID), viabilizando o cruzamento imediato com o artigo completo e com o histórico dos autores envolvidos."
+  },
+  {
     "id": "OpenAI Labs (DALL-E)",
     "title": "OpenAI Labs (DALL-E)",
     "url": "https://labs.openai.com/",
@@ -4193,6 +5130,25 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo de investigações e inteligência baseada em fontes abertas, a plataforma é empregada em análises de contexto e reconstituição visual. Ela auxilia o analista no processamento de informações visuais fragmentadas, permitindo expandir cenários estáticos por IA para avaliar hipóteses geográficas, gerar representações realistas de locais de difícil acesso com base em relatos textuais, ou estruturar elementos visuais complexos que auxiliam na cognição e no entendimento de um caso.",
     "notes": "* Altamente eficaz para apoiar briefings de inteligência, ilustrando cenários operacionais complexos descritos apenas em relatórios textuais ou expandindo imagens cortadas para testes de perspectiva.\n* Pela perspectiva de contra-inteligência e OPSEC, o analista deve estar ciente de que quaisquer dados ou imagens inseridos no sistema são processados pelos servidores da OpenAI e podem ser utilizados para o treinamento de modelos, sendo contraindicado o envio de imagens reais com metadados sensíveis ou rostos de alvos e investigadores."
+  },
+  {
+    "id": "OpenCorporates",
+    "title": "OpenCorporates",
+    "url": "https://opencorporates.com/",
+    "tipo": "Base de Dados Aberta e Plataforma de Inteligência Corporativa Global",
+    "utilidade": "Consulta global, levantamento de registros comerciais e mapeamento societário internacional de empresas e diretores",
+    "descricao": "O OpenCorporates é a maior base de dados aberta sobre o ecossistema corporativo mundial, indexando e padronizando informações de centenas de milhões de empresas e administradores em mais de 140 jurisdições. A plataforma coleta dados diretamente dos registros públicos oficiais de governos (juntas comerciais, casas de registros e secretarias de estado), consolidando informações como identificadores corporativos, status operacional, data de incorporação, endereços de registro, estrutura societária e cargos diretivos (diretores, administradores e secretários corporativos).",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações transnacionais, combate à lavagem de dinheiro (AML), Due Diligence e inteligência financeira (FinINT), a ferramenta funciona como o principal motor de busca global de registros empresariais. Ela viabiliza a correlação de empresas de fachada offshore com entidades locais, permite rastrear redes societárias e participações cruzadas em diversas jurisdições a partir do nome de diretores ou executivos, e simplifica o processo de *pivoting* para identificar subsidiárias e controladoras sem a necessidade de navegar individualmente por múltiplos registros públicos internacionais.",
+    "notes": "* Excelente ponto de partida para identificar estruturas em jurisdições de sigilo e paraísos fiscais que disponibilizam dados de diretoria de maneira pública (como Reino Unido, Delaware/EUA, Panamá, entre outros).\n* Ao realizar investigações baseadas em nomes de executivos, é recomendável cruzar as grafias e dados complementares (como endereços ou datas de nomeação) para evitar homônimos decorrentes do volume massivo da base global.\n* A plataforma preserva registros de empresas inativas ou dissolvidas, servindo como registro histórico para mapear o passado corporativo de alvos de interesse."
   },
   {
     "id": "OpenCTI (Open Cyber Threat Intelligence)",
@@ -4428,6 +5384,26 @@ const TOOLS = [
     "notes": "* O sistema gera uma resposta binária e imediata: se o alvo não possuir nenhuma aeronave, gera-se uma Certidão Negativa; se possuir, o sistema interrompe a certidão negativa e exibe a lista detalhada com as marcas das aeronaves, proprietários e operadores associados.\n* A pesquisa não exige biometria, tokens ou justificativa legal para ser executada, assegurando que o investigador consulte qualquer documento de forma rápida diretamente pela interface superficial do site.\n* Como a consulta é feita em servidores públicos da ANAC e não interage com nenhuma estrutura ou conta pessoal do alvo investigado, a execução dessa busca confere uma OPSEC passiva impecável ao analista."
   },
   {
+    "id": "Pesquisa Pública de Processos SEI - ANAC",
+    "title": "Pesquisa Pública de Processos SEI - ANAC",
+    "url": "https://sei.anac.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0",
+    "tipo": "Portal Governamental de Consulta Pública e Transparência Administrativa",
+    "utilidade": "Pesquisa pública de processos administrativos, documentos oficiais e atos regulatórios da Agência Nacional de Aviação Civil (ANAC) no Sistema Eletrônico de Informações (SEI)",
+    "descricao": "O módulo de Pesquisa Pública do Sistema Eletrônico de Informações (SEI) da ANAC é a interface oficial voltada à consulta e acompanhamento de processos administrativos eletrônicos e documentos gerados no âmbito da agência reguladora. A plataforma permite a qualquer interessado realizar buscas parametrizadas por número de protocolo/processo, interessado/remetente (nome de pessoa física ou razão social/CNPJ), assunto, unidade geradora, data de autuação ou termos textuais livres contidos nos autos públicos.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/empresa",
+      "alvo/veiculo",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações corporativas, Due Diligence, auditoria regulatória e inteligência sobre o setor aéreo, o SEI-ANAC funciona como uma fonte primária de altíssimo valor probatório. Ele permite localizar processos de homologação, autos de infração e multas, outorgas operacionais, disputas administrativas, requerimentos de licenças e certificações técnicas. Ao consultar o nome de um alvo, CNPJ de empresa aérea/operadora de hangar ou o prefixo de uma aeronave, o analista pode ter acesso à íntegra ou ao andamento detalhado de expedientes públicos, revelando contratos, representações legais, procurações e pareceres técnicos de órgãos fiscalizadores.",
+    "notes": "* A busca por termos textuais livres permite encontrar menções a nomes ou prefixos de aeronaves mesmo quando estes não foram cadastrados como interessados diretos na capa do processo.\n* Documentos classificados como restritos ou sigilosos têm o acesso bloqueado na consulta pública, sendo exibidos apenas os metadados do processo e a indicação do nível de acesso.\n* Os números de processos e documentos obtidos no SEI-ANAC podem ser utilizados como termos de busca em Diários Oficiais (DOU) ou referenciados formalmente em pedidos via Fala.BR para obtenção de cópias integrais de autos públicos."
+  },
+  {
     "id": "Pesquisar CNPA - ANAC (Agência Nacional de Aviação Civil)",
     "title": "Pesquisar CNPA - ANAC (Agência Nacional de Aviação Civil)",
     "url": "https://sistemas.anac.gov.br/CNPA/PesquisarCnpa",
@@ -4484,6 +5460,26 @@ const TOOLS = [
     "notes": "* A ferramenta atua de forma passiva em relação ao alvo direto, uma vez que as buscas são submetidas unicamente contra o banco de dados armazenado da própria Intelligence X, garantindo excelente OPSEC ao não gerar requisições nos servidores da vítima.\n* Os resultados extraídos (especialmente listas de e-mails) devem passar por uma fase subsequente de validação de status em ferramentas de entrega para confirmar se as contas descobertas continuam ativas ou se constituem resquícios legados de vazamentos antigos."
   },
   {
+    "id": "PhoneInfoga",
+    "title": "PhoneInfoga",
+    "url": "https://github.com/sundowndev/PhoneInfoga",
+    "tipo": "Ferramenta de Reconhecimento e Coleta de Inteligência Telefônica (CLI / Web UI)",
+    "utilidade": "Reconhecimento avançado, verificação de formato, identificação de operadora/geolocalização e varredura de pegada digital de números de telefone internacionais",
+    "descricao": "O PhoneInfoga é uma das ferramentas de código aberto mais conhecidas para a coleta de inteligência e reconhecimento de números de telefone internacionais. Desenvolvido em Go (com suporte a execução via CLI e Web UI), o software processa números no padrão internacional E.164 para validar sua existência, determinar operadora de telefonia, linha de transmissão (VoIP, móvel, fixo), país/região geográfica associada e automatizar buscas por pegada digital em motores de busca e serviços públicos da web através de mecanismos de *footprinting*.",
+    "testada": false,
+    "tags": [
+      "alvo/telefone",
+      "func/busca-identificacao",
+      "func/scrapers-automacao",
+      "func/validacao-status",
+      "plataforma/terminal",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas voltadas para alvos de telefonia e engenharia reversa de contatos, o PhoneInfoga acelera a fase de reconhecimento preliminar e triagem de números telefônicos. Ele permite verificar se um número é sintético/VoIP ou pertence a uma linha celular real, além de gerar e executar consultas automatizadas em múltiplos buscadores para identificar se o número de telefone foi indexado em fóruns, vazamentos, redes sociais, cadastros comerciais ou documentos públicos.",
+    "notes": "* A ferramenta oferece suporte a contêineres Docker, facilitando sua implantação em ambientes isolados de investigação sem necessidade de instalar dependências locais.\n* Para expandir a profundidade das buscas por pegada digital e mitigar bloqueios por excesso de requisições nos motores de busca, recomenda-se configurar chaves de API (como Google Custom Search) e adotar o uso de proxies ou VPNs para preservar a OPSEC do analista."
+  },
+  {
     "id": "Photopea",
     "title": "Photopea",
     "url": "https://www.photopea.com/",
@@ -4515,6 +5511,24 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações de fontes abertas, o Pic2Map atua diretamente na fase de validação e verificação. A extração passiva de coordenadas GPS e carimbos de data/hora permite ao analista confrontar a integridade de uma evidência visual com a narrativa ou álibi apresentado por um investigado (alvo/pessoa-identidade), estabelecendo uma linha do tempo geográfica precisa e incontestável a partir de mídias originais.",
     "notes": "* A eficácia da ferramenta está estritamente vinculada à preservação dos metadados originais no arquivo; vale ressaltar que a maioria das redes sociais comerciais remove automaticamente os blocos EXIF durante o upload por razões de privacidade dos usuários.\n* Por se tratar de uma plataforma SaaS de acesso público e gratuito, o envio de fotos sensíveis ou que exponham o andamento de investigações restritas deve ser evitado por questões de segurança operacional, visto que o site pode indexar as imagens em feeds de análise.\n* Além da geolocalização, a extração expõe parâmetros técnicos da câmera (modelo do aparelho, abertura, ISO), fornecendo assinaturas de dispositivos que auxiliam na correlação e atribuição de autoria de múltiplos arquivos de mídia."
+  },
+  {
+    "id": "Picarta.ai",
+    "title": "Picarta.ai",
+    "url": "https://picarta.ai/",
+    "tipo": "Ferramenta Web de Inteligência Geoespacial (GEOINT) e Análise Visual por IA",
+    "utilidade": "Geolocalização automatizada de imagens e predição de coordenadas geográficas baseada em Inteligência Artificial e visão computacional",
+    "descricao": "O Picarta.ai é uma plataforma online que utiliza modelos avançados de inteligência artificial, visão computacional e redes neurais profundas para geolocalizar fotografias automaticamente. Ao processar uma imagem enviada pelo usuário, o sistema analisa elementos visuais complexos — como características arquitetônicas, vegetação, relevo, sinalizações viárias, padrões climáticos e iluminação — sem depender de metadados EXIF, calculando e estimando o país, a região, a cidade e as coordenadas de GPS mais prováveis do local da captura, acompanhados de um raio de confiança estatística.",
+    "testada": false,
+    "tags": [
+      "fonte/geoespacial",
+      "func/analise-midia-integridade",
+      "func/analise-processamento-ia",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "Em investigações de fontes abertas, verificação de fatos (fact-checking) e operações de Inteligência Geoespacial (GEOINT/IMINT), o Picarta.ai atua na resolução de desafios de cronolocalização e identificação de locais desconhecidos a partir de evidências visuais. A plataforma é especialmente valiosa para analisar mídias extraídas de redes sociais ou aplicativos de mensageria que tiveram seus metadados EXIF completamente eliminados, permitindo ao analista restringir rapidamente áreas de busca para posterior validação cruzada com cartografia digital, imagens de satélite e ferramentas de Street View.",
+    "notes": "* Os resultados fornecidos pela ferramenta constituem estimativas probabilísticas baseadas em padrões visuais; portanto, as coordenadas geradas devem ser tratadas como ponto de partida e validadas manualmente via Google Earth Pro, Yandex Maps, Mapillary ou Google Street View.\n* Sob a ótica de OPSEC, o envio de imagens sensíveis, confidenciais ou ligadas a investigações em andamento para servidores em nuvem de terceiros deve ser criterioso, evitando o upload de fotografias com rostos nítidos de alvos ou elementos que exponham a operação."
   },
   {
     "id": "PicWish",
@@ -4581,6 +5595,24 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No âmbito do combate a golpes digitais, páginas de phishing e extorsões, esta ferramenta é indispensável para a triagem passiva de fluxos financeiros (alvo/financeiro-crypto). Campanhas fraudulentas frequentemente utilizam o Pix como vetor de monetização. Ao decodificar o QR Code de forma isolada, o analista extrai imediatamente dados civis ou corporativos do beneficiário (ou de laranjas) e a chave Pix associada (como CPF, e-mail ou telefone), permitindo a transição ágil para uma busca direta de identidade sem a necessidade de interagir com aplicativos bancários.",
     "notes": "* A ferramenta realiza a leitura estática das tags EMV (como as sub-tags sob o ID 26, destinadas às informações da conta mercante), o que garante que nenhuma transação real seja simulada ou agendada durante a auditoria.\n* O uso deste utilitário web confere uma OPSEC passiva excelente para o investigador, uma vez que a decodificação da string ou o upload da imagem ocorre em um ambiente controlado e não dispara alertas ou notificações ao proprietário da conta Pix investigada.\n* Caso a chave Pix embutida no código seja do tipo 'Chave Aleatória' (EVP), o analista não obterá o dado direto do documento do alvo pela decodificação, mas reterá o ID exclusivo da chave para futuras requisições legais ou cruzamentos em vazamentos de dados."
+  },
+  {
+    "id": "Pixsy Monitor",
+    "title": "Pixsy Monitor",
+    "url": "https://www.pixsy.com/monitor",
+    "tipo": "Plataforma de Monitoramento de Ativos Visuais / IMINT",
+    "utilidade": "Monitoramento contínuo de direitos autorais, rastreamento de uso indevido de imagens e busca reversa automatizada na web",
+    "descricao": "O Pixsy Monitor é uma plataforma online desenvolvida para monitorar e rastrear a utilização de imagens e fotografias na internet. Utilizando algoritmos proprietários de inteligência visual e rastreadores automatizados (scrapers), o serviço permite que fotógrafos, criadores e analistas submetam portfólios visuais para escanear continuamente a web em busca de correspondências exatas ou imagens derivadas, identificando onde, quando e por quem uma mídia está sendo exibida.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/analise-midia-integridade",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No escopo de investigações de fontes abertas, especialmente em Inteligência de Imagens (IMINT) e verificação de desinformação, o Pixsy Monitor atua como uma ferramenta de busca reversa persistente e passiva. Ela possibilita identificar campanhas de apropriação indevida de identidade (alvo/pessoa-identidade), rastrear a disseminação de fotografias de interesse em múltiplos domínios ao longo do tempo e validar a integridade contextual de conteúdos visuais originais.",
+    "notes": "* A ferramenta mantém o rastreamento em segundo plano (*background*), notificando o usuário sempre que uma nova correspondência é detectada na web.\n* Por ser um serviço proprietário em nuvem, o envio de fotografias confidenciais ou sensíveis de operações deve ser avaliado sob a ótica de sigilo e OPSEC do investigador."
   },
   {
     "id": "Plataforma Krea.ai",
@@ -4651,6 +5683,22 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações de fontes abertas e análise de inteligência, o Lucidchart atua como uma ferramenta analítica na fase de processamento e síntese de informações. Ele desempenha um papel fundamental ao permitir que o analista estruture a massa de dados brutos coletados em um modelo visual compreensível. É amplamente utilizado para correlacionar alvos, mapear redes de relacionamentos complexas (*link analysis*), desenhar estruturas societárias e cadeias de comando de empresas investigadas, esquematizar fluxos financeiros e construir cronologias de eventos, transformando links e dados textuais isolados em inteligência visual acionável.",
     "notes": "* Devido à sua flexibilidade, a plataforma permite a importação de dados estruturados (como planilhas CSV ou Excel) para gerar diagramas automaticamente, o que otimiza o tempo do analista ao lidar com grandes volumes de conexões societárias ou transacionais.\n* Por ser uma plataforma baseada em nuvem onde os dados são processados nos servidores da ferramenta, o analista deve adotar rígidos critérios de OPSEC e proteção de dados ao lidar com casos reais. Recomenda-se evitar a inserção de dados pessoais identificáveis (PII) altamente sensíveis nos planos gratuitos ou sem governança adequada de privacidade."
+  },
+  {
+    "id": "PlayPhrase.me",
+    "title": "PlayPhrase.me",
+    "url": "https://br.playphrase.me/",
+    "tipo": "Motor de Busca de Vídeo e Transcrições Audiovisuais",
+    "utilidade": "Indexação, transcrição e recuperação de clipes audiovisuais e diálogos a partir de termos e frases faladas em produções cinematográficas",
+    "descricao": "O PlayPhrase.me é uma plataforma de busca e indexação audiovisual que cataloga milhões de frases e diálogos falados em filmes e produções cinematográficas. A ferramenta permite que o usuário pesquise uma frase específica em texto e reproduza instantaneamente os trechos de vídeo exatos onde a expressão é pronunciada, organizando os clipes sequencialmente com legendas sincronizadas e referências aos títulos das obras.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas, especialmente na checagem de fatos (*fact-checking*) e inteligência de mídia/áudio (IMINT/AVINT), a plataforma funciona como um arquivo de referência audiovisual. Ela viabiliza a verificação rápida da origem de áudios e falas presentes em mídias virais, memes ou conteúdos sintéticos (como manipulações de voz e *deepfakes*), permitindo aos analistas rastrear se determinada frase ou entonação foi extraída diretamente de uma produção cinematográfica conhecida.",
+    "notes": "* Útil na identificação de trilhas de áudio isoladas ou falas atribuídas erroneamente a indivíduos em gravações vazadas e vídeos manipulados na internet.\n* A plataforma exibe o título da obra cinematográfica junto a cada clipe recuperado, facilitando o cruzamento com bancos de dados de cinema (como IMDb) e a validação do contexto cronológico da mídia original."
   },
   {
     "id": "Portal BNMP (Banco Nacional de Monitoramento de Prisões)",
@@ -5334,6 +6382,25 @@ const TOOLS = [
     "notes": "* O acesso à plataforma exige obrigatoriamente a autenticação por meio do portal unificado GOV.BR (com níveis de segurança prata ou ouro).\n* Os relatórios gerados (como o CCS e o SCR) são comumente encontrados anexados a processos judiciais de quebra de sigilo bancário, tornando-se artefatos essenciais para análise forense local por parte do investigador quando disponíveis nos autos."
   },
   {
+    "id": "Registro Aeronáutico Brasileiro (RAB) - Dados Abertos ANAC",
+    "title": "Registro Aeronáutico Brasileiro (RAB) - Dados Abertos ANAC",
+    "url": "https://www.gov.br/anac/pt-br/acesso-a-informacao/dados-abertos/areas-de-atuacao/aeronaves-1/registro-aeronautico-brasileiro",
+    "tipo": "Repositório de Dados Abertos Governamentais",
+    "utilidade": "Consulta e download de bases de dados estruturadas sobre o Registro Aeronáutico Brasileiro (RAB) para inteligência patrimonial e rastreamento de frotas",
+    "descricao": "A página de Dados Abertos do Registro Aeronáutico Brasileiro (RAB), disponibilizada pela Agência Nacional de Aviação Civil (ANAC), é um repositório institucional que centraliza e distribui bases de dados completas e atualizadas sobre todas as aeronaves civis registradas no Brasil. O portal permite o acesso a microdados estruturados contendo informações cadastrais, fabricantes, modelos, ano de fabricação, tipo de uso, marcas de matrícula (prefixos), operadores, proprietários e status de aeronavegabilidade.",
+    "testada": false,
+    "tags": [
+      "alvo/veiculo",
+      "alvo/pessoa-identidade",
+      "alvo/empresa",
+      "fonte/registros-publicos-gov",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "Em investigações financeiras (FinINT), levantamento patrimonial e análise societária, a base do RAB é uma fonte primária indispensável. Por disponibilizar os dados de forma consolidada e aberta, possibilita ao analista realizar buscas massivas, correlações em massa de nomes/CNPJs com aeronaves de alto valor e mapear frotas executivas corporativas ou de pessoas físicas de interesse sem restrições de consultas pontuais.",
+    "notes": "* Os dados são disponibilizados em formatos estruturados (como CSV), o que permite a ingestão direta em bancos de dados locais, planilhas ou ferramentas de análise de grafos (como Maltego ou Gephi) para cruzamentos em larga escala.\n* As marcas de matrícula (prefixos) obtidas nesta base servem como chaves de entrada diretas (*pivoting*) para sistemas de rastreamento de telemetria e tráfego aéreo em tempo real (como Flightradar24, RadarBox e redes ADS-B)."
+  },
+  {
     "id": "Registro de Voos - Força Aérea Brasileira (FAB)",
     "title": "Registro de Voos - Força Aérea Brasileira (FAB)",
     "url": "https://www.fab.mil.br/voos",
@@ -5477,6 +6544,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No âmbito da engenharia social tática, due diligence e investigações corporativas de alvos específicos, a plataforma funciona como um motor avançado de *pivoting*. A partir do nome de um funcionário ou do domínio de uma organização, o analista consegue mapear a estrutura de pessoal de uma empresa, levantar e-mails corporativos válidos para testes de credenciais e obter pontos de contato direto que auxiliam na vetorização de investigações de inteligência cibernética ou humana.",
     "notes": "* A plataforma estima a probabilidade de entrega e validade de cada e-mail exibido (*confidence score*), reduzindo a ocorrência de falsos positivos durante a triagem.\n* As consultas deixam rastros apenas nos servidores do RocketReach, protegendo a OPSEC do investigador contra notificações diretas no perfil do alvo monitorado (como ocorreria em visitas diretas a redes sociais de negócios)."
+  },
+  {
+    "id": "Same Energy",
+    "title": "Same Energy",
+    "url": "https://same.energy/",
+    "tipo": "Motor de Busca Visual e Descoberta Estética por IA / IMINT",
+    "utilidade": "Busca visual exploratória baseada em estilo estético, composição, paleta de cores e correlação semântica de imagens",
+    "descricao": "O Same Energy é um motor de busca visual minimalista alimentado por aprendizado profundo (*deep learning*) e visão computacional. Diferente dos mecanismos de busca reversa tradicionais que buscam apenas cópias exatas ou correspondências diretas por metadados e texto, a ferramenta indexa imagens analisando estilo artístico, clima (*mood*), paleta cromática, iluminação, composição espacial e padrões semânticos, permitindo navegar infinitamente por correlações visuais similares.",
+    "testada": false,
+    "tags": [
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No contexto de investigações de fontes abertas e inteligência de imagens (IMINT), a plataforma é útil na fase de contextualização visual e enriquecimento de evidências. Ela possibilita identificar a estética predominante ou correntes visuais associadas a um determinado símbolo, padrão gráfico, ilustração ou fotografia. Além disso, auxilia analistas na identificação de comunidades, estilos de design de propaganda/campanhas de influência e elementos visuais de nicho que compartilham a mesma \"assinatura estética\" e conceitual.",
+    "notes": "* A busca pode ser iniciada tanto por meio de termos textuais descritivos quanto pelo upload de imagens ou clique em resultados sugeridos para refinar a proximidade estética (*more like this*).\n* A ferramenta foca na proximidade visual/estética em vez de correspondência binária de pixels; por isso, deve ser usada para análise de estilo, contexto e semântica artística, e não como substituta única de motores de busca reversa exata (como Google Lens ou Yandex)."
   },
   {
     "id": "ScamSearch.io",
@@ -5814,6 +6898,26 @@ const TOOLS = [
     "notes": "* A consulta exige parâmetros específicos como o Código do Imóvel Rural, UF, Município ou os dados do CCIR para realizar a validação de autenticidade.\n* É uma ferramenta ideal para fases avançadas de inteligência patrimonial, servindo para confrontar informações obtidas em cartórios de Registro de Imóveis (RGI) com o cadastro oficial mantido pela autarquia federal."
   },
   {
+    "id": "Social Analyzer",
+    "title": "Social Analyzer",
+    "url": "https://github.com/qeeqbox/social-analyzer",
+    "tipo": "Ferramenta de Análise e Reconhecimento em Mídias Sociais (SOCMINT / Username Enumeration)",
+    "utilidade": "Varredura, análise e rastreamento automatizado de perfis, nomes de usuário e pegada digital em centenas de redes sociais e plataformas online",
+    "descricao": "O Social Analyzer é uma ferramenta de código aberto voltada para a inteligência em fontes abertas (OSINT) e análise de mídias sociais (SOCMINT). O software automatiza o rastreamento, a verificação e a extração de dados públicos em centenas de redes sociais e sites, buscando correspondências para nomes de usuário (*usernames*), nomes civis e identificadores com base em heurísticas avançadas de detecção, metadados de páginas e APIs.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "fonte/redes-sociais",
+      "func/busca-identificacao",
+      "func/scrapers-automacao",
+      "plataforma/terminal",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito das investigações de fontes abertas, o Social Analyzer atua na fase de reconhecimento passivo e *pivoting*. A ferramenta permite mapear de forma centralizada e acelerada a pegada digital de um indivíduo a partir de um seletor conhecido (*username*), descobrindo presenças ativas em comunidades de nicho, fóruns, redes sociais convencionais e serviços web, o que auxilia na correlação de identidades online com pessoas reais.",
+    "notes": "* Pode ser executado em ambiente isolado via Docker, facilitando a implantação tanto com interface de terminal quanto com a interface web integrada.\n* Oferece múltiplos níveis de análise (*analysis levels*), variando desde a simples verificação de existência do perfil até a extração profunda de metadados e fotos de perfil para reduzir a incidência de falsos positivos."
+  },
+  {
     "id": "Social Searcher",
     "title": "Social Searcher",
     "url": "https://www.social-searcher.com",
@@ -5832,6 +6936,24 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo do SOCMINT e do reconhecimento inicial de alvos, o Social Searcher é um recurso tático de alto valor. Ele permite ao analista mapear passivamente a repercussão e a presença digital de um indivíduo (alvo/pessoa-identidade) ou o uso de um pseudônimo específico (alvo/usuario-email) na web aberta. A ferramenta economiza tempo operacional ao dispensar a necessidade de inspecionar individualmente cada plataforma social, expondo postagens isoladas, comentários e fóruns públicos que poderiam passar despercebidos.",
     "notes": "* A execução de consultas básicas na interface web não exige a criação de uma conta ou a realização de login, proporcionando uma excelente OPSEC defensiva ao evitar o uso ou a exposição de contas dissimuladas (Sock Puppets) do investigador.\n* Os dados analíticos de sentimento fornecidos pela inteligência artificial da plataforma servem como um indicador rápido de contexto, auxiliando na triagem de ataques reputacionais ou campanhas coordenadas de desinformação.\n* Por depender diretamente do consumo de APIs públicas e mecanismos de indexação de terceiros, a profundidade dos resultados gerados pela ferramenta pode flutuar de acordo com as políticas de restrição de tráfego e rate-limiting impostas pelas redes sociais auditadas."
+  },
+  {
+    "id": "Sogou Pic (Sogou Images)",
+    "title": "Sogou Pic (Sogou Images)",
+    "url": "https://pic.sogou.com/",
+    "tipo": "Motor de Busca Visual e Reversa de Imagens / IMINT",
+    "utilidade": "Busca reversa de imagens, reconhecimento facial e indexação visual com foco no ecossistema e redes sociais da Ásia e China",
+    "descricao": "O Sogou Pic é o serviço especializado de busca de imagens e reconhecimento visual do Sogou, um dos principais motores de busca da China. A plataforma oferece capacidades avançadas de busca reversa por upload de arquivo ou URL, utilizando algoritmos de visão computacional otimizados para rastrear correspondências visuais, padrões faciais, fotografias similares e produtos em páginas indexadas da internet global e, especialmente, na web asiática.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, inteligência de imagens (IMINT) e checagem de fatos, o Sogou Pic é uma ferramenta complementar fundamental para mitigar pontos cegos deixados por buscadores ocidentais (como Google Lens ou Bing). Ele é altamente eficaz na localização da origem de imagens, identificação de pessoas em plataformas e fóruns orientais (Weibo, Zhihu, Baidu Tieba), detecção de reaproveitamento indevido de fotografias e verificação da autenticidade de mídias virais ou perfis sintéticos (*catfishing*).",
+    "notes": "* A ferramenta possui taxa de sucesso superior a motores ocidentais ao pesquisar imagens originárias ou compartilhadas dentro do ecossistema de redes sociais e fóruns chineses.\n* Recomenda-se o uso integrado a extensões de tradução automática no navegador, visto que grande parte da interface e dos resultados indexados é apresentada em mandarim."
   },
   {
     "id": "Sonic Visualiser",
@@ -5869,6 +6991,46 @@ const TOOLS = [
     "notes": "* Para usufruir da capacidade total da ferramenta com motores que exigem autenticação corporativa, é necessário configurar previamente as chaves de API (API Keys) pessoais do analista no arquivo de configuração do script.\n* A OPSEC defensiva durante a consulta depende diretamente da natureza das APIs integradas. A maioria dos motores executa buscas puramente passivas em seus próprios bancos de dados históricos, mas o analista deve estar ciente de que o uso de chaves de API vinculadas à sua identidade corporativa registra a atividade de busca nas plataformas parceiras.\n* Devido à sua arquitetura CLI simplificada, os outputs gerados pelo Sputnik podem ser facilmente redirecionados para arquivos de texto (.txt) ou integrados a pipelines locais de automação de segurança por meio de operadores do terminal."
   },
   {
+    "id": "Sr. Watson",
+    "title": "Sr. Watson",
+    "url": "https://srwatson.io/",
+    "tipo": "Plataforma Web de Inteligência Empresarial e Análise de Vínculos",
+    "utilidade": "Investigação empresarial, análise de vínculos societários, mapeamento de grupos econômicos e visualização em grafos de empresas brasileiras",
+    "descricao": "O Sr. Watson é uma plataforma web voltada para a inteligência e investigação corporativa no ecossistema de dados brasileiro. A ferramenta indexa e correlaciona dezenas de milhões de registros públicos da Receita Federal e outros órgãos oficiais, permitindo pesquisar empresas por CNPJ, Razão Social, sócios (CPF), e-mails e telefones de contato. O diferencial da aplicação reside na estruturação de dados em formato de grafo interativo (mapa de vínculos), possibilitando a identificação visual de quadros societários (QSA), filiais, empresas coligadas, laranjas, grupos econômicos ocultos e endereços compartilhados.",
+    "testada": false,
+    "tags": [
+      "alvo/empresa",
+      "alvo/pessoa-identidade",
+      "alvo/usuario-email",
+      "alvo/telefone",
+      "fonte/registros-publicos-gov",
+      "func/busca-identificacao",
+      "func/analise-visualizacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No âmbito de investigações corporativas, Due Diligence, auditoria de compliance, recuperação de ativos e combate a fraudes empresariais, o Sr. Watson serve como um avançado motor de *pivoting* e visualização de vínculos. O analista consegue partir de um identificador inicial (como um CNPJ ou o nome de um sócio) para expandir interativamente toda a rede de relacionamentos da pessoa jurídica ou física, correlacionando contatos telefônicos, caixas postais corporativas e fachadas físicas compartilhadas.",
+    "notes": "* A visualização em grafo facilita a identificação rápida de \"empresas de fachada\" ou \"laranjas\", especialmente quando vários CNPJs distintos compartilham o mesmo número de contato, e-mail de contador ou endereço físico.\n* O recurso de busca básica pode ser realizado de forma anônima diretamente pela barra de pesquisa do portal.\n* Para relatórios probatórios ou instrução pericial, recomenda-se contravalidar as informações societárias obtidas diretamente nas certidões das Juntas Comerciais estaduais ou na base de dados em tempo real da Receita Federal."
+  },
+  {
+    "id": "Startpage",
+    "title": "Startpage",
+    "url": "https://www.startpage.com/",
+    "tipo": "Motor de Busca Privativo e Proxy de Resultados Web",
+    "utilidade": "Mecanismo de busca web focado em privacidade que entrega resultados do Google sem rastrear endereços IP, histórico ou metadados de usuários",
+    "descricao": "O Startpage é um mecanismo de busca web privativo que atua como intermediário entre o usuário e o índice de pesquisa do Google. A plataforma consulta os servidores do Google de forma anônima e entrega os resultados ao usuário sem registrar endereços IP, sem armazenar consultas em logs de servidores, sem utilizar cookies de perfilamento e sem construir históricos comportamentais para anúncios direcionados. Além disso, disponibiliza a função \"Visualização Anônima\" (*Anonymous View*), que permite carregar páginas da lista de resultados por meio de um servidor proxy integrado.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "func/busca-dorks",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência em fontes abertas, o Startpage é utilizado como fonte primária de reconhecimento e coleta de informações na web de superfície. Ele viabiliza a obtenção da densidade e qualidade dos resultados do Google sem expor o endereço IP real do analista e sem viés de personalização algorítmica (*filter bubble*). A ferramenta apoia a segurança operacional (OPSEC) ao evitar que termos de pesquisa investigativos sensíveis sejam vinculados à identidade digital do investigador e ao permitir a inspeção preliminar de sites desconhecidos via proxy.",
+    "notes": "* A funcionalidade \"Visualização Anônima\" (*Anonymous View*) ao lado de cada link resultante permite inspecionar sites suspeitos sem que o servidor de destino capture o endereço IP real ou os cabeçalhos do navegador do investigador.\n* Por não guardar preferências ou histórico de localização geográfica, consultas regionais podem exigir a especificação explícita do país, cidade ou uso do operador `site:` com o ccTLD correspondente no campo de busca."
+  },
+  {
     "id": "Stolen Camera Finder",
     "title": "Stolen Camera Finder",
     "url": "https://www.stolencamerafinder.com",
@@ -5884,6 +7046,22 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo do IMINT e da engenharia social reversa, esta ferramenta é um recurso poderoso para quebrar pseudônimos e estabelecer atribuição (alvo/pessoa-identidade). A partir de uma única imagem obtida em fontes abertas, o analista consegue extrair a assinatura digital do hardware e descobrir se o mesmo equipamento foi utilizado para publicar fotos em outras plataformas (como Flickr ou blogs antigos). Isso permite conectar contas aparentemente anônimas ao mesmo indivíduo ou rastrear o paradeiro de um dispositivo furtado.",
     "notes": "* A eficácia da ferramenta depende inteiramente da preservação dos blocos de metadados originais; plataformas de redes sociais comerciais (como Instagram e Facebook) eliminam esses registros durante o upload, tornando necessário obter arquivos brutos ou hospedados em plataformas que preservem o EXIF (ex: repositórios de fotografia profissional).\n* Para preservar a OPSEC defensiva, caso a imagem sob investigação possua dados sensíveis ou geolocalização crítica associada ao investigador, recomenda-se realizar a extração do número de série localmente (via ExifTool) e inserir apenas a string numérica na caixa de pesquisa de texto do site, em vez de fazer o upload direto da foto.\n* O banco de dados da plataforma baseia-se em web scraping focado em plataformas de compartilhamento de fotos, o que significa que o sistema pode não cobrir imagens hospedadas em fóruns privados ou na deep web."
+  },
+  {
+    "id": "Subzin",
+    "title": "Subzin",
+    "url": "https://www.subzin.com/",
+    "tipo": "Motor de Busca de Legendas e Transcrições Audiovisuais",
+    "utilidade": "Indexação, transcrição e recuperação de diálogos e frases literais em arquivos e legendas de filmes e séries",
+    "descricao": "O Subzin é uma plataforma online de indexação e busca textual baseada em legendas e transcrições de obras cinematográficas e episódios de séries de televisão. O serviço mapeia milhões de linhas de diálogo, permitindo ao usuário pesquisar citações ou frases específicas para identificar o título exato da produção, a temporada/episódio e o instante temporal (*timestamp*) em que a fala ocorre.",
+    "testada": false,
+    "tags": [
+      "fonte/arquivos-noticias",
+      "plataforma/web",
+      "acesso/gratuito"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, análise de mídias (IMINT/AVINT) e checagem de fatos (*fact-checking*), o Subzin atua como repositório de referência para verificação da proveniência de conteúdos falados. A ferramenta viabiliza a identificação rápida da origem de diálogos, transcrições e áudios que circulam na internet associados a informações falsas, teorias da conspiração ou alegações enganosas sobre declarações públicas, permitindo confirmar se determinado trecho textual provém de um roteiro de ficção ou produção televisiva.",
+    "notes": "* Útil para correlacionar falas extraídas de áudios manipulados ou interceptados com transcrições oficiais de filmes, auxiliando na desarticulação de boatos que utilizam dublagens ou falas fictícias como se fossem declarações reais.\n* A ferramenta fornece o contexto temporal sequencial (frases ditas imediatamente antes e depois do termo pesquisado), facilitando a confirmação do contexto dramático original da cena."
   },
   {
     "id": "SunCalc",
@@ -5934,6 +7112,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No contexto de investigações em fontes abertas, o SUPERAntiSpyware atua diretamente na proteção do analista e na integridade de sua infraestrutura local (OPSEC), garantindo que a máquina de investigação ou máquina virtual (VM) não seja comprometida por artefatos maliciosos de contra-inteligência ou spywares que possam vazar dados da operação.",
     "notes": "* Ideal para ser executado periodicamente em Máquinas Virtuais (VMs) de investigação após a conclusão de coletas de dados complexas ou interações com portais potencialmente maliciosos.\n* Pode ser utilizado em conjunto com ferramentas de monitoramento de processos para assegurar que nenhuma persistência oculta ou artefato espião permaneça ativo em segundo plano na máquina local."
+  },
+  {
+    "id": "Swisscows",
+    "title": "Swisscows",
+    "url": "https://swisscows.com/pt",
+    "tipo": "Motor de Busca Web Privativo e Indexador Semântico",
+    "utilidade": "Mecanismo de busca privativo na web para consultas neutras, pesquisa contextual e recuperação de informações sem rastreamento de dados ou telemetria",
+    "descricao": "O Swisscows é um motor de busca na web com sede e infraestrutura de servidores localizadas na Suíça, projetado com foco estrito em privacidade e proteção de dados. A ferramenta opera com indexação própria combinada a índices parceiros sem armazenar endereços IP, sem registrar o histórico de pesquisas, sem criar perfis comportamentais e sem utilizar cookies de rastreamento comercial. Além disso, disponibiliza mapas conceituais e sugestões de termos interligados por relevância semântica.",
+    "testada": false,
+    "tags": [
+      "func/busca-ampla",
+      "plataforma/web",
+      "acesso/gratuito",
+      "opsec/ambiente-seguro"
+    ],
+    "utilidade_Osint": "No ciclo de inteligência de fontes abertas, o Swisscows é utilizado na etapa de reconhecimento e coleta de informações em fontes abertas de superfície. Por não registrar histórico nem personalizar respostas com base em pegada digital, a plataforma fornece resultados de busca limpos e isentos da \"bolha de filtros\" (*filter bubble*). Seu uso fortalece a segurança operacional (OPSEC) do analista ao garantir que as palavras-chave e tópicos sensíveis investigados não fiquem associados à identidade ou ao endereço IP real do pesquisador.",
+    "notes": "* A plataforma implementa filtros estritos voltados para conteúdos familiares (*family-friendly*), o que pode omitir ou restringir certos tópicos sensíveis em comparação com buscadores generalistas não filtrados.\n* Apresenta um painel lateral dinâmico de termos associados que auxilia na descoberta de palavras-chave correlacionadas e na expansão do escopo inicial da pesquisa investigativa."
   },
   {
     "id": "SynScan Breaches (Verified Search)",
@@ -6041,6 +7236,26 @@ const TOOLS = [
     "notes": "* Ideal para contornar formulários de captura e paywalls que exigem um cadastro rápido com e-mail para liberação de downloads de relatórios ou acesso a ferramentas de consulta.\n* Por se tratar de um e-mail público e temporário, não deve ser utilizado para armazenar informações sensíveis da investigação, visto que o acesso à caixa de entrada é perdido assim que a sessão é encerrada ou o endereço expira."
   },
   {
+    "id": "ThatsThem",
+    "title": "ThatsThem",
+    "url": "https://thatsthem.com/",
+    "tipo": "Motor de Busca de Pessoas e Registros Públicos (People Search Engine)",
+    "utilidade": "Mecanismo de busca e correlação cruzada de dados biográficos, telefones, endereços, e-mails e endereços IP de residentes nos EUA",
+    "descricao": "O ThatsThem é um mecanismo de busca de pessoas (*people search engine*) e agregador de registros públicos focado em dados de residentes nos Estados Unidos. A plataforma indexa e correlaciona bilhões de registros públicos, cadastros comerciais e bases de dados abertas, permitindo consultas cruzadas e buscas reversas por nome completo, endereço residencial, número de telefone, endereço de e-mail, número de identificação veicular (VIN) e endereço IP.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/usuario-email",
+      "alvo/telefone",
+      "alvo/ip",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No âmbito de investigações em fontes abertas e *due diligence* de pessoas físicas, o ThatsThem atua como um motor de *pivoting* multidirecional. Ele permite ao analista inserir um único identificador conhecido (como um endereço de e-mail ou número de telefone) para revelar o nome do titular, histórico de endereços residenciais, possíveis familiares/associados e até provedores ou endereços IP correlacionados, acelerando a consolidação da identidade e da pegada digital do alvo.",
+    "notes": "* A base de dados é primariamente concentrada em residentes e registros dos Estados Unidos, apresentando pouca ou nenhuma assertividade para alvos sediados em outras regiões geográficas.\n* Excelente para operações de *reverse lookups* (busca reversa por e-mail ou telefone) para confirmar se um número ou e-mail de contato comercial pertence a uma pessoa física real."
+  },
+  {
     "id": "The Aviation Herald (AvHerald)",
     "title": "The Aviation Herald (AvHerald)",
     "url": "https://avherald.com/",
@@ -6109,6 +7324,24 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No escopo da Inteligência de Ameaças Cibernéticas (CTI) e investigações de infraestrutura (func/infraestrutura-cybint), o ThreatFox funciona como um motor de validação passiva e enriquecimento contextual. Ao isolar um endereço IP (alvo/ip) ou um domínio (alvo/dominio) suspeito coletado em logs ou em campanhas de phishing, o analista pode verificar instantaneamente se o ativo está atrelado a servidores de comando e controle (C2) ativos ou canais de distribuição de malware, mapeando a família exata da ameaça cibernética.",
     "notes": "* A plataforma oferece suporte a uma API robusta e gratuita para consultas automatizadas e integrações nativas com ferramentas de SIEM, SOAR (como Cortex XSOAR) e frameworks de compartilhamento de ameaças (como MISP).\n* A OPSEC é puramente passiva ao efetuar consultas diretamente nos registros consolidados do site ou via exportações de feeds diários, garantindo que o atacante ou a infraestrutura monitorada não receba alertas de que está sob investigação.\n* Cada indicador inserido no ecossistema conta com metadados adicionais de grande utilidade analítica, incluindo links para relatórios técnicos externos, postagens em redes sociais de pesquisadores de segurança e comentários específicos sobre o comportamento do vetor malicioso."
+  },
+  {
+    "id": "TinEye Reverse Image Search",
+    "title": "TinEye Reverse Image Search",
+    "url": "https://www.tineye.com/",
+    "tipo": "Motor de Busca Reversa de Imagens / IMINT",
+    "utilidade": "Busca reversa de imagens para identificação de fontes originais, duplicatas, modificações e histórico de publicação na web",
+    "descricao": "O TinEye é um dos pioneiros motores de busca reversa de imagens na web, utilizando tecnologia proprietária de reconhecimento de padrões e assinaturas digitais visuais (*image fingerprinting*). A plataforma permite que usuários façam o upload de um arquivo ou forneçam uma URL para encontrar correspondências exatas, versões recortadas, redimensionadas, editadas ou com sobreposições gráficas em bilhões de páginas indexadas.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "func/busca-identificacao",
+      "func/analise-midia-integridade",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No âmbito de investigações de fontes abertas, análise de mídias (IMINT) e checagem de fatos (*fact-checking*), o TinEye é uma ferramenta de referência para determinar a proveniência e a cronologia de um ativo visual. Ele possibilita identificar a publicação mais antiga de uma fotografia (*oldest result*), desmantelar perfis falsos e fraudes de identidade (*sock puppets* e *catfishing*) e detectar alterações ou manipulações em imagens utilizadas como evidências digitais.",
+    "notes": "* O recurso de ordenação por \"Oldest\" (Mais antiga) é fundamental para rastrear a primeira vez que uma imagem foi indexada na internet, facilitando a identificação do autor original ou o momento em que um boato começou a circular.\n* O recurso \"Compare\" permite alternar visualmente entre a imagem original e o resultado encontrado para verificar microalterações, cortes ou adições de texto/elementos visuais."
   },
   {
     "id": "TLG.pm Search",
@@ -6570,6 +7803,25 @@ const TOOLS = [
     "notes": "* Ideal para o desenvolvimento de cronologias de eventos ou organogramas de alvos corporativos, facilitando a exportação dos grafos em alta resolução para inclusão em relatórios acadêmicos ou corporativos.\n* Por se tratar de uma plataforma em nuvem de terceiros, recomenda-se a higienização prévia dos dados (*data masking*) antes de inseri-los nos diagramas, evitando o upload de dados sensíveis ou informações reais do analista em servidores externos."
   },
   {
+    "id": "Whitepages",
+    "title": "Whitepages",
+    "url": "https://www.whitepages.com/",
+    "tipo": "Plataforma de Busca e Diretório de Pessoas",
+    "utilidade": "Localização de pessoas, identificação de números de telefone e consulta de registros residenciais ou comerciais nos Estados Unidos",
+    "descricao": "O Whitepages é uma plataforma online de diretórios e registros públicos focada principalmente no território norte-americano. A ferramenta agrupa dados de listas telefônicas, registros de propriedade, históricos residenciais e cadastros civis, permitindo que os usuários busquem informações detalhadas sobre cidadãos e empresas a partir de nomes, telefones, endereços ou e-mails.",
+    "testada": false,
+    "tags": [
+      "alvo/pessoa-identidade",
+      "alvo/telefone",
+      "alvo/endereco",
+      "fonte/registros-publicos-gov",
+      "plataforma/web",
+      "acesso/limitado"
+    ],
+    "utilidade_Osint": "No contexto de investigações em fontes abertas e inteligência corporativa ou patrimonial, o Whitepages atua como um repositório central para validar a existência física de indivíduos, descobrir endereços históricos, associar números de telefone a titulares específicos e mapear conexões residenciais ou familiares nos Estados Unidos, auxiliando na verificação de antecedentes e na localização de alvos corporativos ou pessoais.",
+    "notes": "* A ferramenta possui restrições severas de acesso baseadas na geolocalização do IP, exigindo frequentemente o uso de conexões compatíveis ou contornos técnicos para acesso fora dos Estados Unidos.\n* Os dados obtidos devem sempre ser cruzados com outras fontes primárias, uma vez que diretórios comerciais de registros públicos podem conter desatualizações ou homônimos."
+  },
+  {
     "id": "Who Posted What?",
     "title": "Who Posted What?",
     "url": "https://whopostedwhat.com",
@@ -6745,6 +7997,23 @@ const TOOLS = [
     ],
     "utilidade_Osint": "No âmbito das investigações que envolvem Inteligência Geoespacial (GEOINT), o World Imagery Wayback é um recurso indispensável para o rastreamento de mudanças físicas em locais específicos. Ele permite monitorar o desenvolvimento ou demolição de infraestruturas, verificar a presença histórica de ativos (como veículos, embarcações e aeronaves) em datas retroativas, validar álibis por meio de alterações na paisagem urbana/rural e identificar metadados temporais associados a imagens georreferenciadas.",
     "notes": "* A interface permite deslizar e alternar de forma fluida entre diferentes *snapshots* temporais de um mesmo ponto de coordenada, facilitando a detecção visual de modificações no terreno.\n* Ao passar o cursor ou inspecionar as camadas disponíveis na barra lateral esquerda, o analista ganha acesso aos metadados exatos da captura, incluindo a data em que o satélite sobrevoou o local e a resolução da imagem fornecida."
+  },
+  {
+    "id": "X Pro (antigo TweetDeck)",
+    "title": "X Pro (antigo TweetDeck)",
+    "url": "https://pro.x.com/",
+    "tipo": "Painel de Monitoramento e Inteligência em Mídias Sociais (SOCMINT Dashboard)",
+    "utilidade": "Monitoramento em tempo real, gestão multi-colunas de postagens e inteligência de redes sociais (SOCMINT) no X (Twitter)",
+    "descricao": "O X Pro (anteriormente conhecido como TweetDeck) é a interface avançada de gerenciamento, visualização e monitoramento contínuo de conteúdo da rede social X. A ferramenta organiza feeds, listas de usuários, menções, notificações e pesquisas em colunas modulares em tempo real, permitindo a aplicação de operadores de busca, filtros de engajamento, restrições temporais e localização geográfica.",
+    "testada": false,
+    "tags": [
+      "fonte/redes-sociais",
+      "func/busca-identificacao",
+      "plataforma/web",
+      "acesso/pago"
+    ],
+    "utilidade_Osint": "No escopo de investigações de fontes abertas voltadas para mídias sociais (SOCMINT), o X Pro atua como um centro de comando para coleta e acompanhamento passivo de alvos e narrativas. A plataforma possibilita monitorar simultaneamente diferentes contas de interesse, acompanhar a disseminação de hashtags em tempo real durante eventos críticos, rastrear menções a entidades específicas e capturar interações antes que eventuais postagens sejam apagadas pelos autores.",
+    "notes": "* A combinação de operadores de busca nativos (como `from:`, `to:`, `since:`, `until:` e `min_faves:`) dentro das colunas permite criar filtros de alta precisão para isolar dados relevantes e reduzir ruídos informacionais.\n* Permite alternar e visualizar múltiplos feeds de contas sem a necessidade de recarregar a página, facilitando o monitoramento contínuo durante incidentes ou operações em andamento."
   },
   {
     "id": "Yandex Images",
